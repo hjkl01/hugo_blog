@@ -1,0 +1,6 @@
+# baseURL = 'http://note.hjkl01.cn/'
+baseURL = 'https://hjkl01.github.io/'
+languageCode = 'zh-hans'
+title = 'My Note Site'
+theme = 'hugo-geekdoc'
+publishDir = 'docs'

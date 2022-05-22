@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Note Site</title>
+    <link>https://hjkl01.github.io/</link>
+    <description>Recent content on My Note Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language><atom:link href="https://hjkl01.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>adb</title>
+      <link>https://hjkl01.github.io/linux/adb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/adb/</guid>
+      <description># adb commands  adb devices #查看连接设备  adb start-server 启动adb 服务，基本不会用到，因为只要设备连接正确，会自动启动adb server  adb kill-server 停止adb server  adb -s cf27456f shell # 指定连接设备使用命令  adb install test.apk # 安装应用  adb install -r demo.apk #安装apk 到sd 卡：  adb uninstall cn.com.test.mobile #卸载应用，需要指定包  adb uninstall -k cn.com.test.mobile #卸载app 但保留数据和缓存文件  adb shell pm list packages #列出手机装的所有app 的包名  adb shell pm list packages -s 列出系统应用的所有包名  adb shell pm list packages -3 #列出除了系统应用的第三方应用包名  adb shell pm clear cn.</description>
+    </item>
+    
+    <item>
+      <title>arch</title>
+      <link>https://hjkl01.github.io/linux/arch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/arch/</guid>
+      <description>wiki     https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers
+  ⚠️ 设置root的密码       wget https://tinyurl.com/vps2arch 也会被重定向到以下 url       wget https://gitlab.com/drizzt/vps2arch/-/raw/master/vps2arch   启动脚本       sh ./vps2arch   当你从脚本默认的源下载速度较慢的时候，可以使用 -m 参数指定源，例如        (sudo) sh ./vps2arch -m https://mirrors.neusoft.edu.cn/archlinux/ sync ; reboot -f 使用 ntp     pacman -S ntp timedatectl set-ntp true # 设置时区 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime hwclock --systohc utf8       编辑 /etc/locale.</description>
+    </item>
+    
+    <item>
+      <title>arch pppoe</title>
+      <link>https://hjkl01.github.io/linux/arch-pppoe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/arch-pppoe/</guid>
+      <description>pppoe 拨号     yay -S --noconfirm rp-pppoe  ifconfig # 查看对应的网卡 sudo ifconfig 网卡 down # 停止网卡服务 sudo pppoe-setup # 输入对应的用户名密码等信息 sudo pppoe-start  sudo route delete default sudo route add default ppp0 # ppp0可能是其他名字 ifconfig查看  sudo nvim /etc/resolvconf.conf # 更新name_servers sudo resolvconf -u # 更新DNS </description>
+    </item>
+    
+    <item>
+      <title>celery</title>
+      <link>https://hjkl01.github.io/python/celery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/celery/</guid>
+      <description>celery 用法     # test.py import time from datetime import datetime  from celery import Celery     # result_address = &amp;#39;elasticsearch://user:passwd@ip:port/index&amp;#39;  broker = &amp;#39;redis://:passwd@ip:port/db&amp;#39; result_address = &amp;#34;mongodb://user:password@ip:port/db&amp;#34;  app = Celery(&amp;#34;tasks&amp;#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&amp;#34;task failed&amp;#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&amp;#34;json&amp;#34;,  accept_content=[&amp;#34;json&amp;#34;], # Ignore other content  result_serializer=&amp;#34;json&amp;#34;,  timezone=&amp;#34;Asia/Shanghai&amp;#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&amp;#39;tasks.</description>
+    </item>
+    
+    <item>
+      <title>chrome</title>
+      <link>https://hjkl01.github.io/python/chrome/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/chrome/</guid>
+      <description>web scraper     https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn {&amp;#34;_id&amp;#34;:&amp;#34;test&amp;#34;,&amp;#34;startUrl&amp;#34;:[&amp;#34;https://list.jd.com/list.html?cat=9987,653,655&amp;#34;,&amp;#34;https://list.jd.com/list.html?cat=9987,653,655&amp;amp;page=2&amp;amp;s=58&amp;amp;click=0&amp;#34;],&amp;#34;selectors&amp;#34;:[{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;name&amp;#34;,&amp;#34;multiple&amp;#34;:true,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;_root&amp;#34;],&amp;#34;selector&amp;#34;:&amp;#34;#J_goodsList &amp;gt; ul &amp;gt; li&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorElement&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;sku_name&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;a em&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;price&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34; div &amp;gt; div.p-price &amp;gt; strong &amp;gt; i&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;comments&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.p-commit strong a&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;shop&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.p-shop span a&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;}]} {&amp;#34;_id&amp;#34;:&amp;#34;tianmao&amp;#34;,&amp;#34;startUrl&amp;#34;:[&amp;#34;https://list.tmall.com/search_product.htm?spm=a220m.1000858.0.0.219b2a680geXJ0&amp;amp;s=120&amp;amp;q=%CA%D6%BB%FA&amp;amp;sort=s&amp;amp;style=g&amp;amp;from=mallfp..pc_1_searchbutton&amp;amp;active=1&amp;amp;type=pc#J_Filter&amp;#34;],&amp;#34;selectors&amp;#34;:[{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;sku&amp;#34;,&amp;#34;multiple&amp;#34;:true,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;_root&amp;#34;],&amp;#34;selector&amp;#34;:&amp;#34;#J_ItemList .product&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorElement&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;name&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.productTitle a&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;price&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.productPrice em&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;shop&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;a.productShop-name&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;sales&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;span em&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;comments&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;span a[data-p]&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;}]} chrome devtools     var result = $x(&amp;#39;xpath&amp;#39;).map(function(i){return i.textContent} ); copy(result); </description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://hjkl01.github.io/python/databases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/databases/</guid>
+      <description>sqlalchemy     # pip install psycopg2-binary # sqlacodegen postgres://user:passwd@host:ip/database --outfile model.py from sqlalchemy import create_engine from sqlalchemy import Column, String from sqlalchemy.ext.declarative import declarative_base from sqlalchemy.orm import sessionmaker  db_string = &amp;#34;postgres://admin:donotusethispassword@aws-us-east-1-portal.19.dblayer.com:15813/compose&amp;#34;  db = create_engine(db_string) base = declarative_base()   class Film(base):  __tablename__ = &amp;#34;films&amp;#34;   title = Column(String, primary_key=True)  director = Column(String)  year = Column(String)   Session = sessionmaker(db) session = Session()  base.</description>
+    </item>
+    
+    <item>
+      <title>django</title>
+      <link>https://hjkl01.github.io/python/django/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/django/</guid>
+      <description>import os import django from proxyip.models import ProxyIP  os.environ[&amp;#39;DJANGO_SETTINGS_MODULE&amp;#39;] = &amp;#39;dj_project.settings&amp;#39; django.setup()  p = ProxyIP(ip=&amp;#39;192.168.50.1&amp;#39;) p.save() print(ProxyIP.objects.all())  python manage.py shell &amp;lt; main.py python manage.py dumpdata (myapp) &amp;gt; myapp.json  python manage.py loaddata myapp.json </description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://hjkl01.github.io/linux/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/docker/</guid>
+      <description>install     wget -qO- https://get.docker.com/ | sh sudo usermod -aG docker $USER  # 修改源 &amp;#34; lang:sh %} # path: /etc/docker/daemon.json {  &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;http://hub-mirror.c.163.com&amp;#34;] } tools      ctop
+lazydocker
+ docker run -it -v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/.config/jesseduffield/lazydocker lazyteam/lazydocker docker-compose.yml     ddns     version: &amp;#39;3.1&amp;#39; services:  ddns_go:  image: jeessy/ddns-go  restart: unless-stopped  network_mode: &amp;#34;host&amp;#34;  volumes:  - .</description>
+    </item>
+    
+    <item>
+      <title>example code</title>
+      <link>https://hjkl01.github.io/python/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/python/</guid>
+      <description># mysql-clients yay -S --noconfirm mysql-clients gcc pip install mysqlclient   # json json.dumps(item, ensure_ascii=False, indent=4)  # 对字典排序 sorted(_dict.items(), key=lambda d: d[1], reverse=False)  # unicode replace repr()  # http server py2 python -m SimpleHTTPServer 8000 py3 python -m http.server 8000  # 格式化输出 print(&amp;#34;{:02d}&amp;#34;.format(1)) print(f&amp;#34;{1:02d}&amp;#34;)  # datetime pip install python-dateutil  from datetime import datetime from dateutil import parser  format_time = datetime.now().strftime(&amp;#34;%m/%d/%Y, %H:%M:%S&amp;#34;)  t = &amp;#34;Thu, 9 Sep 2021 00:17:59&amp;#34; result = parser.</description>
+    </item>
+    
+    <item>
+      <title>fastapi</title>
+      <link>https://hjkl01.github.io/python/fastapi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/fastapi/</guid>
+      <description>from fastapi import FastAPI from pydantic import BaseModel  app = FastAPI()   # @app.get(&amp;#34;/&amp;#34;) async def read_root():  return {&amp;#34;Hello&amp;#34;: &amp;#34;World&amp;#34;}   # @app.get(&amp;#34;/items/{item_id}&amp;#34;) async def read_item(item_id: int, q: str = None):  return {&amp;#34;item_id&amp;#34;: item_id, &amp;#34;q&amp;#34;: q}   class Item(BaseModel):  name: str  description: str = None  price: float  tax: float = None   # @app.post(&amp;#34;/items/&amp;#34;) async def create_item(item: Item):  return item   app.</description>
+    </item>
+    
+    <item>
+      <title>git &amp;&amp; ssh</title>
+      <link>https://hjkl01.github.io/linux/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/git/</guid>
+      <description>git config     # generate public key git config --global user.name &amp;#34;&amp;#34; git config --global user.email &amp;#34;&amp;#34; ssh-keygen -t rsa -b 4096 -C &amp;#34;&amp;#34;  # git config git config --global http.https://github.com.proxy socks5://127.0.0.1:1080 git config --global https.https://github.com.proxy socks5://127.0.0.1:1080  # or vi ~/.gitconfig [http &amp;#34;https://github.com&amp;#34;] proxy = socks5://127.0.0.1:1080 postBuffer = 524288000 [https &amp;#34;https://github.com&amp;#34;] proxy = socks5://127.0.0.1:1080 postBuffer = 524288000  # git submodule git submodule add https://github.com/liuyib/hexo-theme-stun/ themes/stun git submodule update --remote ssh config     # $HOME/.</description>
+    </item>
+    
+    <item>
+      <title>jupyter</title>
+      <link>https://hjkl01.github.io/python/jupyter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/jupyter/</guid>
+      <description># jupyter config pip install jupyter jupyter notebook --generate-config # ipython from notebook.auth import passwd passwd() # or jupyter notebook password  vim ~/.jupyter/jupyter_notebook_config.py  c.NotebookApp.ip=&amp;#39;*&amp;#39; c.NotebookApp.password = u&amp;#39;&amp;#39; c.NotebookApp.open_browser = False c.NotebookApp.port = 8000  jupyter notebook import os import re import secrets  import yaml from rich import print   class ConfigMeta:  def __init__(self, _file=&amp;#34;config.yaml&amp;#34;):  self.file = _file   def __getattr__(self, key):  with open(self.</description>
+    </item>
+    
+    <item>
+      <title>Mac Config &amp;&amp; Softwares </title>
+      <link>https://hjkl01.github.io/mac/mac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/mac/mac/</guid>
+      <description>刷新DNS     sudo dscacheutil -flushcache Mac终端录屏     # https://github.com/icholy/ttygif brew install ttygif ttyrec myrecording  # On OSX optionally you can set a -f flag which will bypass cropping which is needed for terminal apps which aren&amp;#39;t full screen. Both standard Terminal and iTerm apps are supported. ttygif myrecording -f 在touch bar 上显示歌词-LyricsX     https://github.com/ddddxxx/LyricsX
+# mtmr 配置 [{  &amp;#34;type&amp;#34;: &amp;#34;dnd&amp;#34;,  &amp;#34;align&amp;#34;: &amp;#34;left&amp;#34;,  &amp;#34;width&amp;#34;: 38  },  {  &amp;#34;type&amp;#34;: &amp;#34;brightnessDown&amp;#34;,  &amp;#34;width&amp;#34;: 32,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;align&amp;#34;: &amp;#34;left&amp;#34;  },  {  &amp;#34;type&amp;#34;: &amp;#34;brightnessUp&amp;#34;,  &amp;#34;width&amp;#34;: 32,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;align&amp;#34;: &amp;#34;left&amp;#34;  },  {  &amp;#34;type&amp;#34;: &amp;#34;dock&amp;#34;,  &amp;#34;align&amp;#34;: &amp;#34;left&amp;#34;,  &amp;#34;width&amp;#34;: 420  },  {  &amp;#34;type&amp;#34;: &amp;#34;group&amp;#34;,  &amp;#34;align&amp;#34;: &amp;#34;right&amp;#34;,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;title&amp;#34;: &amp;#34;Media&amp;#34;,  &amp;#34;items&amp;#34;: [{  &amp;#34;type&amp;#34;: &amp;#34;close&amp;#34;,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;align&amp;#34;: &amp;#34;left&amp;#34;  },  {  &amp;#34;type&amp;#34;: &amp;#34;brightnessDown&amp;#34;,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;align&amp;#34;: &amp;#34;left&amp;#34;,  &amp;#34;width&amp;#34;: 36  },  {  &amp;#34;type&amp;#34;: &amp;#34;brightness&amp;#34;,  &amp;#34;width&amp;#34;: 200,  &amp;#34;align&amp;#34;: &amp;#34;left&amp;#34;,  &amp;#34;image&amp;#34;: {  &amp;#34;base64&amp;#34;: &amp;#34;iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQMAAAD58POIAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURffLOPfLNyaSVzUAAAACdFJOU/kBxOqnWgAAAbJJREFUSMfVljtyhDAQBVulQCFH4CgcDR1NR9ERFBKoeA5GfGddtkNvwFINFKP5tED22+Zxwviv6QVKfIEc/iNoF5gkpLIeYI8SUp4PsAUJiekADQntF6isQjvxCTrhAJlFqMMBeIH9BMsD7DAb2BhvYbIyNAOCZIWqYKGTpDZJFQu9EKVd44RxQRq3IrULWD62C8wSssWUZEsR0k6wcDOrJZmoBpMKI+s5qkBQCQOUJADVOECdOsDS0gDbsgHMfT4rVwHSrZQFIN5ABka8BgDgAeZ+BztBgvUEnSgVlhNsTFJjvoF5HAZorBpdYKAiSRbqNyBIUr6AjZMdPwO72R40MElS+wZUWA+wQ6LAYkFvdIhkmA+wQSDDdIAGAZ6A34H0x0fca11gBZZsIHSIfnE/5+NjCn/OuiuUB+/aunZwDeNayjXdTpDN0wlY+r1PfWu75nfj8RogN2JuCN2Y5qgMwTI0wGPUnQw6Qarx0sVNKA5Mn6VUL22lIbZoYitDbPmlvocc9Umfl2D7adz1reC3pF8av4m+DCenp/ndZuG3E7fhuC3pH2+vnz8V3MfE+bnxBTXuuIMTrLWHAAAAAElFTkSuQmCC&amp;#34;  }  },  {  &amp;#34;type&amp;#34;: &amp;#34;brightnessUp&amp;#34;,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;align&amp;#34;: &amp;#34;left&amp;#34;,  &amp;#34;width&amp;#34;: 36  },  {  &amp;#34;type&amp;#34;: &amp;#34;volumeDown&amp;#34;,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;align&amp;#34;: &amp;#34;left&amp;#34;,  &amp;#34;width&amp;#34;: 36  },  {  &amp;#34;type&amp;#34;: &amp;#34;volume&amp;#34;,  &amp;#34;width&amp;#34;: 200,  &amp;#34;align&amp;#34;: &amp;#34;left&amp;#34;  },  {  &amp;#34;type&amp;#34;: &amp;#34;volumeUp&amp;#34;,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;align&amp;#34;: &amp;#34;left&amp;#34;,  &amp;#34;width&amp;#34;: 36  },  {  &amp;#34;type&amp;#34;: &amp;#34;previous&amp;#34;,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;align&amp;#34;: &amp;#34;center&amp;#34;  },  {  &amp;#34;type&amp;#34;: &amp;#34;play&amp;#34;,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;align&amp;#34;: &amp;#34;center&amp;#34;  },  {  &amp;#34;type&amp;#34;: &amp;#34;next&amp;#34;,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;align&amp;#34;: &amp;#34;center&amp;#34;  }  ]  },  {  &amp;#34;type&amp;#34;: &amp;#34;displaySleep&amp;#34;,  &amp;#34;width&amp;#34;: 20,  &amp;#34;align&amp;#34;: &amp;#34;right&amp;#34;,  &amp;#34;bordered&amp;#34;: false  },  {  &amp;#34;type&amp;#34;: &amp;#34;weather&amp;#34;,  &amp;#34;align&amp;#34;: &amp;#34;right&amp;#34;,  &amp;#34;icon_type&amp;#34;: &amp;#34;images&amp;#34;,  &amp;#34;api_key&amp;#34;: &amp;#34;ca93a0bb8cdb428552660d83249e4bc9&amp;#34;,  &amp;#34;bordered&amp;#34;: false  },  {  &amp;#34;type&amp;#34;: &amp;#34;play&amp;#34;,  &amp;#34;align&amp;#34;: &amp;#34;right&amp;#34;,  &amp;#34;width&amp;#34;: 38  },  // {  // &amp;#34;type&amp;#34;: &amp;#34;volumeDown&amp;#34;,  // &amp;#34;bordered&amp;#34;: false,  // &amp;#34;align&amp;#34;: &amp;#34;right&amp;#34;,  // &amp;#34;width&amp;#34;: 28  // },  // {  // &amp;#34;type&amp;#34;: &amp;#34;volumeUp&amp;#34;,  // &amp;#34;bordered&amp;#34;: false,  // &amp;#34;align&amp;#34;: &amp;#34;right&amp;#34;,  // &amp;#34;width&amp;#34;: 28  // },  {  &amp;#34;type&amp;#34;: &amp;#34;mute&amp;#34;,  &amp;#34;bordered&amp;#34;: false,  &amp;#34;align&amp;#34;: &amp;#34;right&amp;#34;  },  // {  // &amp;#34;type&amp;#34;: &amp;#34;battery&amp;#34;,  // &amp;#34;align&amp;#34;: &amp;#34;right&amp;#34;,  // &amp;#34;bordered&amp;#34;: false  // },  // {  // &amp;#34;type&amp;#34;: &amp;#34;timeButton&amp;#34;,  // &amp;#34;formatTemplate&amp;#34;: &amp;#34;HH:mm&amp;#34;,  // &amp;#34;align&amp;#34;: &amp;#34;right&amp;#34;,  // &amp;#34;bordered&amp;#34;: false,  // &amp;#34;longAction&amp;#34;: &amp;#34;shellScript&amp;#34;,  // &amp;#34;longExecutablePath&amp;#34;: &amp;#34;/usr/bin/pmset&amp;#34;,  // &amp;#34;longShellArguments&amp;#34;: [&amp;#34;sleepnow&amp;#34;]  // } ] </description>
+    </item>
+    
+    <item>
+      <title>mitmproxy</title>
+      <link>https://hjkl01.github.io/python/mitmproxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/mitmproxy/</guid>
+      <description># install pip install mitmproxy # open mitm.it after set proxy mitmproxy --http2 --listen-host 0.0.0.0 --listen-port 8888 -s mitm_test.py # http.HTTPFlow 实例 flow flow.request.headers #获取所有头信息，包含Host、User-Agent、Content-type等字段 flow.request.url #完整的请求地址，包含域名及请求参数，但是不包含放在body里面的请求参数 flow.request.pretty_url #同flow.request.url目前没看出什么差别 flow.request.host #域名 flow.request.method #请求方式。POST、GET等 flow.request.scheme #什么请求 ，如https flow.request.path # 请求的路径，url除域名之外的内容 flow.request.get_text() #请求中body内容，有一些http会把请求参数放在body里面，那么可通过此方法获取，返回字典类型 flow.request.query #返回MultiDictView类型的数据，url直接带的键值参数 flow.request.get_content()#bytes,结果如flow.request.get_text() flow.request.raw_content #bytes,结果如flow.request.get_content() flow.request.urlencoded_form #MultiDictView，content-type：application/x-www-form-urlencoded时的请求参数，不包含url直接带的键值参数 flow.request.multipart_form #MultiDictView，content-type：multipart/form-data 时的请求参数，不包含url直接带的键值参数  以上均为获取request信息的一些常用方法，对于response，同理 flow.response.status_code #状态码 flow.response.text#返回内容，已解码 flow.response.content #返回内容，二进制 flow.response.setText()#修改返回内容，不需要转码 # example def response(flow):  if &amp;#34;some url&amp;#34; in flow.request.url:  print(&amp;#34;[*] Request: {}&amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>mongo</title>
+      <link>https://hjkl01.github.io/python/mongo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/mongo/</guid>
+      <description># MongoDB 语法  db.users.find({ create_at: { $exists: true } }) db.users.find() select * from users db.users.find({&amp;#34;age&amp;#34; : 27}) select * from users where age = 27 db.users.find({&amp;#34;username&amp;#34; : &amp;#34;joe&amp;#34;, &amp;#34;age&amp;#34; : 27}) select * from users where &amp;#34;username&amp;#34; = &amp;#34;joe&amp;#34; and age = 27 db.users.find({}, {&amp;#34;username&amp;#34; : 1, &amp;#34;email&amp;#34; : 1}) select username, email from users db.users.find({}, {&amp;#34;username&amp;#34; : 1, &amp;#34;_id&amp;#34; : 0}) // no case // 即时加上了列筛选，_id也会返回；必须显式的阻止_id返回 db.users.find({&amp;#34;age&amp;#34; : {&amp;#34;$gte&amp;#34; : 18, &amp;#34;$lte&amp;#34; : 30}}) select * from users where age &amp;gt;=18 and age &amp;lt;= 30 // $lt(&amp;lt;) $lte(&amp;lt;=) $gt(&amp;gt;) $gte(&amp;gt;=) db.</description>
+    </item>
+    
+    <item>
+      <title>multiprocessing</title>
+      <link>https://hjkl01.github.io/python/multiprocessing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/multiprocessing/</guid>
+      <description>import multiprocessing   def f(msg):  print(msg)  return multiprocessing.current_process().name + &amp;#39;-&amp;#39; + msg   def func1():  pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())  results = []  for i in range(10):  msg = &amp;#34;hello %d&amp;#34; % (i)  results.append(pool.apply_async(f, (msg, )))  pool.close()  pool.join()  print(&amp;#34;Sub-process(es) done.&amp;#34;)   for res in results:  print(res.get())   def func2():  from multiprocessing import Pool  # with Pool(5) as p:  with Pool(processes=multiprocessing.</description>
+    </item>
+    
+    <item>
+      <title>multiprocessing</title>
+      <link>https://hjkl01.github.io/python/ocr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/ocr/</guid>
+      <description>https://github.com/breezedeus/cnocr     </description>
+    </item>
+    
+    <item>
+      <title>neovim</title>
+      <link>https://hjkl01.github.io/linux/neovim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/neovim/</guid>
+      <description>我的neovim配置      https://github.com/hjkl01/init.vim
+ 插件     # status/tabline vim-airline/vim-airline Plug &amp;#39;vim-airline/vim-airline&amp;#39; Plug &amp;#39;vim-airline/vim-airline-themes&amp;#39; let g:airline#extensions#tabline#formatter = &amp;#39;default&amp;#39; let g:airline#extensions#tabline#enabled = 1 &amp;#34; let g:airline#extensions#tabline#left_sep = &amp;#39; &amp;#39; &amp;#34; let g:airline#extensions#tabline#left_alt_sep = &amp;#39;|&amp;#39; &amp;#34; let g:airline#extensions#tabline#enabled = 1 &amp;#34; let g:airline#extensions#tabline#tab_nr_type = 1 &amp;#34; tab number &amp;#34; let g:airline#extensions#tabline#show_tab_nr = 1 &amp;#34; let g:airline#extensions#tabline#formatter = &amp;#39;default&amp;#39; &amp;#34; let g:airline#extensions#tabline#buffer_nr_show = 0 &amp;#34; let g:airline#extensions#tabline#fnametruncate = 16 &amp;#34; let g:airline#extensions#tabline#fnamecollapse = 2 &amp;#34; let g:airline#extensions#tabline#buffer_idx_mode = 1 let g:airline_theme=&amp;#39;molokai&amp;#39; # format file Plug &amp;#39;Chiel92/vim-autoformat&amp;#39; &amp;#34; autocmd BufWrite * :Autoformat let g:autoformat_autoindent = 1 let g:autoformat_retab = 1 let g:autoformat_remove_trailing_spaces = 1   # 文件目录  Plug &amp;#39;preservim/nerdtree&amp;#39; let g:NERDTreeWinPos = &amp;#34;right&amp;#34; let NERDTreeShowHidden=1 let NERDTreeShowLineNumbers=1 let NERDTreeIgnore = [&amp;#39;\.</description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>https://hjkl01.github.io/linux/nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/nginx/</guid>
+      <description>推荐在线配置      https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN
+ 静态文件     server {  listen 80;  listen [::]:80;  server_name blog.viewer.pub;  root /html/github;  location / {  index index.html index.htm;  } } 转发端口     server {  listen 80;  server_name dj.viewer.pub;   root /html/www/;  location / {  proxy_pass http://127.0.0.1:8000/;  } } 重定向     server {  listen 80;  server_name blog.</description>
+    </item>
+    
+    <item>
+      <title>npm</title>
+      <link>https://hjkl01.github.io/linux/yarn_npm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/yarn_npm/</guid>
+      <description>yarn/npm 设置国内源     # 临时 npm --registry https://registry.npm.taobao.org install express # 写入文件 yarn config set registry &amp;#39;https://registry.npm.taobao.org&amp;#39; yarn config get registry  npm config set registry https://registry.npm.taobao.org npm config get registry use yrm     npm install -g yrm # yarn global add yrm yrm ls yrm use taobao yrm test </description>
+    </item>
+    
+    <item>
+      <title>pip</title>
+      <link>https://hjkl01.github.io/python/pip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/pip/</guid>
+      <description># virtualenv  (sudo) pip install virtualenv virtualenv -p /usr/bin/python3.7 ~/.virtualenv/py3 # pip freeze &amp;gt; requirements.txt  # pipenv alias pv=&amp;#39;pipenv run python&amp;#39; alias pi=&amp;#39;pipenv run pip install &amp;#39;  # pip.conf  - ### 一次 pip install web.py -i http://pypi.douban.com/simple --trusted-host pypi.douban.com - ### 全局  # 清华源 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple # 阿里源 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ # 腾讯源 pip config set global.index-url http://mirrors.cloud.tencent.com/pypi/simple # 豆瓣源 pip config set global.</description>
+    </item>
+    
+    <item>
+      <title>proxy</title>
+      <link>https://hjkl01.github.io/linux/proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/proxy/</guid>
+      <description>trojan-go     brew install trojan-go  修改 /usr/local/etc/trojan-go/config.json  brew service start trojan-go glider     yay -S glider  glider -listen :1080 -forward trojan://password@ip:443  # with auth glider -listen http://user:user_passwd@:61000 -forward trojan://password@ip:443 trojan     https://github.com/trojan-gfw/trojan ### 机场推荐: https://portal.shadowsocks.nz/aff.php?aff=24252  ### 部署 https://github.com/Jrohy/trojan 旧     server:     install libsodium pip install shadowsocks pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U  # path : /etc/shadowsocks.</description>
+    </item>
+    
+    <item>
+      <title>python send mail</title>
+      <link>https://hjkl01.github.io/python/fastapi_mail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/fastapi_mail/</guid>
+      <description>fastapi send mail API     import uvicorn from fastapi import FastAPI, BackgroundTasks, UploadFile, File, Form from starlette.responses import JSONResponse from fastapi_mail import FastMail, MessageSchema, ConnectionConfig from pydantic import BaseModel, EmailStr from typing import List, Text   class EmailSchema(BaseModel):  email: List[EmailStr]  html: Text  conf = ConnectionConfig( 	# update username, password, from  # example qq mail  # https://service.mail.qq.com/cgi-bin/help?subtype=1&amp;amp;&amp;amp;id=28&amp;amp;&amp;amp;no=1001256  MAIL_USERNAME=&amp;#34;qq123456&amp;#34;,  MAIL_PASSWORD=&amp;#34;password&amp;#34;,  MAIL_FROM=&amp;#34;qq123456@qq.</description>
+    </item>
+    
+    <item>
+      <title>remote desktop</title>
+      <link>https://hjkl01.github.io/linux/todesk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/todesk/</guid>
+      <description>arch install todesk     wget https://dl.todesk.com/linux/todesk_2.0.2_x86_64.pkg.tar.zst  sudo pacman -U todesk_2.0.2_x86_64.pkg.tar.zst  sudo systemctl restart todeskd.service 详情参考: https://www.todesk.com/download_detail.html</description>
+    </item>
+    
+    <item>
+      <title>samba</title>
+      <link>https://hjkl01.github.io/linux/samba/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/samba/</guid>
+      <description>在arch 中安装参考     https://wiki.archlinux.org/title/samba 在ubuntu中安装     sudo apt-get install samba sudo useradd xxx sudo smbpasswd -a xxx sudo vi /etc/samba/smb.conf  #### 配置内加入以下内容 [dev] comment = dev path = /var/dev valid user = xxx write list = xxx create mask = 0664 directory mask = 0775 force user = xxx force group = xxx public = no available = yes browseable = yes security = user ### 重启samba【sudo service smbd restart】 </description>
+    </item>
+    
+    <item>
+      <title>settings.py</title>
+      <link>https://hjkl01.github.io/python/settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/settings/</guid>
+      <description># pip install python-dotenv pyyaml loguru import os import sys  import toml import yaml from loguru import logger from dotenv import load_dotenv  BASE_DIR = os.path.abspath(os.path.dirname(__file__)).rstrip(&amp;#34;/common&amp;#34;)  log_file_path = os.path.join(BASE_DIR, &amp;#34;logs/stdout.log&amp;#34;) err_log_file_path = os.path.join(BASE_DIR, &amp;#34;logs/error.log&amp;#34;)  logger.add(  log_file_path,  format=&amp;#34;{process} {thread} {time:YYYY.MM.DD HH.mm.ss} {level}.{file}.{name}.{module}.{line} {message}&amp;#34;,  rotation=&amp;#34;100 MB&amp;#34;,  colorize=True,  enqueue=True,  backtrace=True,  diagnose=True,  level=&amp;#34;INFO&amp;#34;, ) logger.add(  err_log_file_path,  format=&amp;#34;{time:YYYY.MM.DD HH.mm.ss} {level}.{file}.{name}.{module}.{line} {message}&amp;#34;,  rotation=&amp;#34;100 MB&amp;#34;,  level=&amp;#34;ERROR&amp;#34;,  colorize=True,  enqueue=True,  backtrace=True,  diagnose=True, )   class SettingsMeta:  def __init__(self, _file=None):  self.</description>
+    </item>
+    
+    <item>
+      <title>socks5 转 http 之 privoxy</title>
+      <link>https://hjkl01.github.io/linux/privoxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/privoxy/</guid>
+      <description>socks5 转 http     privoxy 配置     yay -S privoxy  cd /etc/privoxy  (sudo) mv config config.bak (sudo) vi config  forward-socks5t / 127.0.0.1:1080 . listen-address 127.0.0.1:9888  sudo systemctl restart privoxy.service sudo systemctl enable privoxy.service </description>
+    </item>
+    
+    <item>
+      <title>spider-selenium</title>
+      <link>https://hjkl01.github.io/python/spider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/python/spider/</guid>
+      <description>import random from selenium import webdriver from time import sleep from bs4 import BeautifulSoup as BS   options = webdriver.ChromeOptions() UA = &amp;#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36&amp;#39; options.add_argument(f&amp;#39;user-agent={UA}&amp;#39;)  options.add_experimental_option(&amp;#34;excludeSwitches&amp;#34;, [&amp;#34;enable-automation&amp;#34;]) options.add_experimental_option(&amp;#39;useAutomationExtension&amp;#39;, False)  # 没有配置环境变量的话需要填写Chromedriver的路径：webdriver.Chrome(executable_path=&amp;#34;***&amp;#34;) driver = webdriver.Chrome(options=options) driver.maximize_window()  # 去掉window.navigator.webdriver字段，防止被检测出是使用selenium driver.execute_cdp_cmd(&amp;#34;Page.addScriptToEvaluateOnNewDocument&amp;#34;, {  &amp;#34;source&amp;#34;: &amp;#34;&amp;#34;&amp;#34; Object.defineProperty(navigator, &amp;#39;webdriver&amp;#39;, { get: () =&amp;gt; undefined }) &amp;#34;&amp;#34;&amp;#34; }) </description>
+    </item>
+    
+    <item>
+      <title>starchart</title>
+      <link>https://hjkl01.github.io/linux/starcharts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/starcharts/</guid>
+      <description>星图     在markdown中的代码:     ![stars](https://starchart.cc/lesssound/pornhub.svg) example:     </description>
+    </item>
+    
+    <item>
+      <title>supervisor </title>
+      <link>https://hjkl01.github.io/linux/supervisor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/supervisor/</guid>
+      <description>后缀为conf或ini     [program:frp_ssh]  command = /home/user/frp/frpc -c /home/user/frp/config.ini directory = /home/user/somedir user = user autostart = true autorestart = true startsecs = 3  redirect_stderr = true stdout_logfile_maxbytes = 50MB stdout_logfile_backups = 10 stdout_logfile = /home/user/frp/log </description>
+    </item>
+    
+    <item>
+      <title>SwitchyOmega</title>
+      <link>https://hjkl01.github.io/linux/switchyomega/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/switchyomega/</guid>
+      <description>config      SwitchyOmega 访问变慢
+关闭chrome的安全dns
+Privacy and Security -&amp;gt; Security -&amp;gt; Use Secure DNS
+ 参考: https://github.com/FelisCatus/SwitchyOmega/issues/1742#issuecomment-826272936</description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://hjkl01.github.io/linux/ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/ubuntu/</guid>
+      <description>中文乱码     sudo apt-get -y install language-pack-zh-hans  #写入 ~/.zshrc: LC_ALL=zh_CN.utf8 export LC_ALL  source ~/.zshrc 配置静态IP     path: `/etc/network/interface`  auto eth1 iface eth1 inet static address 192.168.56.xx netmask 255.255.255.0 network 192.168.56.0 broadcast 192.168.56.255  if possible, 配置路由器中的dhcp. ip route     sudo route add -net 66.1.254.0/24 gw 66.16.62.254 enp4s0 sudo ip addr flush dev enp4s0 安装Ubuntu 分区     efi swap	交换空间 / ext4 /boot	200M左右	ext4	/tmp	5G左右	ext4	手动配置swap内存      sudo fallocate -l 4G /swapfile sudo chmod 600 /swapfile sudo mkswap /swapfile sudo swapon /swapfile  sudo vim /etc/fstab /swapfile none swap sw 0 0 </description>
+    </item>
+    
+    <item>
+      <title>vnc</title>
+      <link>https://hjkl01.github.io/linux/vnc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/vnc/</guid>
+      <description>服务端安装     # ubuntu   sudo apt-get install x11vnc   x11vnc -storepasswd   x11vnc -auth guess -once -loop -noxdamage -repeat -rfbauth ~/.vnc/passwd -rfbport 5900 -shared   x11vnc -forever   https://www.realvnc.com/en/connect/download/viewer/   # arch   yay -S x11vnc net-tools  update -&amp;gt; /etc/gdm/custom.conf:  WaylandEnable=false   x11vnc -wait 50 -noxdamage -passwd PASSWORD -display :0 -forever -o /var/log/x11vnc.log -bg 客户端      https://www.</description>
+    </item>
+    
+    <item>
+      <title>zsh</title>
+      <link>https://hjkl01.github.io/linux/zsh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/zsh/</guid>
+      <description>我的Oh My zsh + nvim 配置      https://github.com/hjkl01/dotfiles
+ </description>
+    </item>
+    
+  </channel>
+</rss>
