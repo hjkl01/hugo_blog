@@ -1,5 +1,5 @@
 ---
-title: "zsh"
+title: "Linux"
 draft: true
 ---
 

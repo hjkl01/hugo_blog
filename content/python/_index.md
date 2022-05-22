@@ -1,9 +1,9 @@
 ---
-title: "example code"
+title: "Python"
 draft: true
 ---
 
-```sh
+```python
 # mysql-clients
 yay -S --noconfirm mysql-clients gcc
 pip install mysqlclient

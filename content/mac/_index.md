@@ -1,5 +1,5 @@
 ---
-title: "Mac Config && Softwares "
+title: "Mac"
 draft: true
 ---
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linuxes on My Note Site</title>
+    <title>Linux on My Note Site</title>
     <link>https://hjkl01.github.io/linux/</link>
-    <description>Recent content in Linuxes on My Note Site</description>
+    <description>Recent content in Linux on My Note Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language><atom:link href="https://hjkl01.github.io/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -32,17 +32,6 @@
       
       <guid>https://hjkl01.github.io/linux/arch-pppoe/</guid>
       <description>pppoe 拨号     yay -S --noconfirm rp-pppoe  ifconfig # 查看对应的网卡 sudo ifconfig 网卡 down # 停止网卡服务 sudo pppoe-setup # 输入对应的用户名密码等信息 sudo pppoe-start  sudo route delete default sudo route add default ppp0 # ppp0可能是其他名字 ifconfig查看  sudo nvim /etc/resolvconf.conf # 更新name_servers sudo resolvconf -u # 更新DNS </description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://hjkl01.github.io/linux/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hjkl01.github.io/linux/docker/</guid>
-      <description>install     wget -qO- https://get.docker.com/ | sh sudo usermod -aG docker $USER  # 修改源 &amp;#34; lang:sh %} # path: /etc/docker/daemon.json {  &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;http://hub-mirror.c.163.com&amp;#34;] } tools      ctop
-lazydocker
- docker run -it -v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/.config/jesseduffield/lazydocker lazyteam/lazydocker docker-compose.yml     ddns     version: &amp;#39;3.1&amp;#39; services:  ddns_go:  image: jeessy/ddns-go  restart: unless-stopped  network_mode: &amp;#34;host&amp;#34;  volumes:  - .</description>
     </item>
     
     <item>
@@ -165,16 +154,6 @@ Privacy and Security -&amp;gt; Security -&amp;gt; Use Secure DNS
       
       <guid>https://hjkl01.github.io/linux/vnc/</guid>
       <description>服务端安装     # ubuntu   sudo apt-get install x11vnc   x11vnc -storepasswd   x11vnc -auth guess -once -loop -noxdamage -repeat -rfbauth ~/.vnc/passwd -rfbport 5900 -shared   x11vnc -forever   https://www.realvnc.com/en/connect/download/viewer/   # arch   yay -S x11vnc net-tools  update -&amp;gt; /etc/gdm/custom.conf:  WaylandEnable=false   x11vnc -wait 50 -noxdamage -passwd PASSWORD -display :0 -forever -o /var/log/x11vnc.log -bg 客户端      https://www.</description>
-    </item>
-    
-    <item>
-      <title>zsh</title>
-      <link>https://hjkl01.github.io/linux/zsh/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hjkl01.github.io/linux/zsh/</guid>
-      <description>我的Oh My zsh + nvim 配置      https://github.com/hjkl01/dotfiles
- </description>
     </item>
     
   </channel>

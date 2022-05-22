@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pythons on My Note Site</title>
+    <title>Python on My Note Site</title>
     <link>https://hjkl01.github.io/python/</link>
-    <description>Recent content in Pythons on My Note Site</description>
+    <description>Recent content in Python on My Note Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language><atom:link href="https://hjkl01.github.io/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -40,15 +40,6 @@
       
       <guid>https://hjkl01.github.io/python/django/</guid>
       <description>import os import django from proxyip.models import ProxyIP  os.environ[&amp;#39;DJANGO_SETTINGS_MODULE&amp;#39;] = &amp;#39;dj_project.settings&amp;#39; django.setup()  p = ProxyIP(ip=&amp;#39;192.168.50.1&amp;#39;) p.save() print(ProxyIP.objects.all())  python manage.py shell &amp;lt; main.py python manage.py dumpdata (myapp) &amp;gt; myapp.json  python manage.py loaddata myapp.json </description>
-    </item>
-    
-    <item>
-      <title>example code</title>
-      <link>https://hjkl01.github.io/python/python/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hjkl01.github.io/python/python/</guid>
-      <description># mysql-clients yay -S --noconfirm mysql-clients gcc pip install mysqlclient   # json json.dumps(item, ensure_ascii=False, indent=4)  # 对字典排序 sorted(_dict.items(), key=lambda d: d[1], reverse=False)  # unicode replace repr()  # http server py2 python -m SimpleHTTPServer 8000 py3 python -m http.server 8000  # 格式化输出 print(&amp;#34;{:02d}&amp;#34;.format(1)) print(f&amp;#34;{1:02d}&amp;#34;)  # datetime pip install python-dateutil  from datetime import datetime from dateutil import parser  format_time = datetime.now().strftime(&amp;#34;%m/%d/%Y, %H:%M:%S&amp;#34;)  t = &amp;#34;Thu, 9 Sep 2021 00:17:59&amp;#34; result = parser.</description>
     </item>
     
     <item>
