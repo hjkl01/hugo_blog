@@ -10,9 +10,6 @@ import time
 from datetime import datetime
 
 from celery import Celery
-
-
- 
  
 # result_address = 'elasticsearch://user:passwd@ip:port/index'
 
