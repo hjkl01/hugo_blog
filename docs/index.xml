@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Note Site</title>
+    <title>我的笔记 on My Note Site</title>
     <link>https://hjkl01.github.io/</link>
-    <description>Recent content on My Note Site</description>
+    <description>Recent content in 我的笔记 on My Note Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language><atom:link href="https://hjkl01.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/python/celery/</guid>
-      <description>celery 用法     # test.py import time from datetime import datetime  from celery import Celery     # result_address = &amp;#39;elasticsearch://user:passwd@ip:port/index&amp;#39;  broker = &amp;#39;redis://:passwd@ip:port/db&amp;#39; result_address = &amp;#34;mongodb://user:password@ip:port/db&amp;#34;  app = Celery(&amp;#34;tasks&amp;#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&amp;#34;task failed&amp;#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&amp;#34;json&amp;#34;,  accept_content=[&amp;#34;json&amp;#34;], # Ignore other content  result_serializer=&amp;#34;json&amp;#34;,  timezone=&amp;#34;Asia/Shanghai&amp;#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&amp;#39;tasks.</description>
+      <description>celery 用法     # test.py import time from datetime import datetime  from celery import Celery  # result_address = &amp;#39;elasticsearch://user:passwd@ip:port/index&amp;#39;  broker = &amp;#39;redis://:passwd@ip:port/db&amp;#39; result_address = &amp;#34;mongodb://user:password@ip:port/db&amp;#34;  app = Celery(&amp;#34;tasks&amp;#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&amp;#34;task failed&amp;#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&amp;#34;json&amp;#34;,  accept_content=[&amp;#34;json&amp;#34;], # Ignore other content  result_serializer=&amp;#34;json&amp;#34;,  timezone=&amp;#34;Asia/Shanghai&amp;#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&amp;#39;tasks.</description>
     </item>
     
     <item>

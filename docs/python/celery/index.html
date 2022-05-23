@@ -8,7 +8,7 @@
 <meta name="generator" content="Hugo 0.98.0" />
 
 
-  <meta name="description" content="celery 用法     # test.py import time from datetime import datetime  from celery import Celery     # result_address = &#39;elasticsearch://user:passwd@ip:port/index&#39;  broker = &#39;redis://:passwd@ip:port/db&#39; result_address = &#34;mongodb://user:password@ip:port/db&#34;  app = Celery(&#34;tasks&#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&#34;task failed&#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&#34;json&#34;,  accept_content=[&#34;json&#34;], # Ignore other content  result_serializer=&#34;json&#34;,  timezone=&#34;Asia/Shanghai&#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&#39;tasks." />
+  <meta name="description" content="celery 用法     # test.py import time from datetime import datetime  from celery import Celery  # result_address = &#39;elasticsearch://user:passwd@ip:port/index&#39;  broker = &#39;redis://:passwd@ip:port/db&#39; result_address = &#34;mongodb://user:password@ip:port/db&#34;  app = Celery(&#34;tasks&#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&#34;task failed&#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&#34;json&#34;,  accept_content=[&#34;json&#34;], # Ignore other content  result_serializer=&#34;json&#34;,  timezone=&#34;Asia/Shanghai&#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&#39;tasks." />
 
     <title>celery | My Note Site</title>
 
@@ -34,7 +34,7 @@
     content="celery"
   />
   <meta property="og:site_name" content="My Note Site" />
-  <meta property="og:description" content="celery 用法     # test.py import time from datetime import datetime  from celery import Celery     # result_address = &#39;elasticsearch://user:passwd@ip:port/index&#39;  broker = &#39;redis://:passwd@ip:port/db&#39; result_address = &#34;mongodb://user:password@ip:port/db&#34;  app = Celery(&#34;tasks&#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&#34;task failed&#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&#34;json&#34;,  accept_content=[&#34;json&#34;], # Ignore other content  result_serializer=&#34;json&#34;,  timezone=&#34;Asia/Shanghai&#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&#39;tasks." />
+  <meta property="og:description" content="celery 用法     # test.py import time from datetime import datetime  from celery import Celery  # result_address = &#39;elasticsearch://user:passwd@ip:port/index&#39;  broker = &#39;redis://:passwd@ip:port/db&#39; result_address = &#34;mongodb://user:password@ip:port/db&#34;  app = Celery(&#34;tasks&#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&#34;task failed&#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&#34;json&#34;,  accept_content=[&#34;json&#34;], # Ignore other content  result_serializer=&#34;json&#34;,  timezone=&#34;Asia/Shanghai&#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&#39;tasks." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hjkl01.github.io/python/celery/" />
 
@@ -43,7 +43,7 @@
 
   <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="celery" />
-  <meta name="twitter:description" content="celery 用法     # test.py import time from datetime import datetime  from celery import Celery     # result_address = &#39;elasticsearch://user:passwd@ip:port/index&#39;  broker = &#39;redis://:passwd@ip:port/db&#39; result_address = &#34;mongodb://user:password@ip:port/db&#34;  app = Celery(&#34;tasks&#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&#34;task failed&#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&#34;json&#34;,  accept_content=[&#34;json&#34;], # Ignore other content  result_serializer=&#34;json&#34;,  timezone=&#34;Asia/Shanghai&#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&#39;tasks." />
+  <meta name="twitter:description" content="celery 用法     # test.py import time from datetime import datetime  from celery import Celery  # result_address = &#39;elasticsearch://user:passwd@ip:port/index&#39;  broker = &#39;redis://:passwd@ip:port/db&#39; result_address = &#34;mongodb://user:password@ip:port/db&#34;  app = Celery(&#34;tasks&#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&#34;task failed&#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&#34;json&#34;,  accept_content=[&#34;json&#34;], # Ignore other content  result_serializer=&#34;json&#34;,  timezone=&#34;Asia/Shanghai&#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&#39;tasks." />
 
 
   <script type="application/ld+json">
@@ -54,7 +54,7 @@
       "name": "celery",
       "url" : "https://hjkl01.github.io/python/celery/",
       "headline": "celery",
-      "description": "celery 用法     # test.py import time from datetime import datetime  from celery import Celery     # result_address = \u0027elasticsearch:\/\/user:passwd@ip:port\/index\u0027  broker = \u0027redis:\/\/:passwd@ip:port\/db\u0027 result_address = \u0022mongodb:\/\/user:password@ip:port\/db\u0022  app = Celery(\u0022tasks\u0022, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(\u0022task failed\u0022)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=\u0022json\u0022,  accept_content=[\u0022json\u0022], # Ignore other content  result_serializer=\u0022json\u0022,  timezone=\u0022Asia\/Shanghai\u0022,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {\u0027tasks.",
+      "description": "celery 用法     # test.py import time from datetime import datetime  from celery import Celery  # result_address = \u0027elasticsearch:\/\/user:passwd@ip:port\/index\u0027  broker = \u0027redis:\/\/:passwd@ip:port\/db\u0027 result_address = \u0022mongodb:\/\/user:password@ip:port\/db\u0022  app = Celery(\u0022tasks\u0022, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(\u0022task failed\u0022)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=\u0022json\u0022,  accept_content=[\u0022json\u0022], # Ignore other content  result_serializer=\u0022json\u0022,  timezone=\u0022Asia\/Shanghai\u0022,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {\u0027tasks.",
       "wordCount" : "235",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
@@ -2206,7 +2206,7 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>My Note Site</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/python/' href='/python/'><span itemprop='name'>Python</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>celery</span><meta itemprop='position' content='3' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>我的笔记</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/python/' href='/python/'><span itemprop='name'>Python</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>celery</span><meta itemprop='position' content='3' /></li>
   
 
   
@@ -2238,9 +2238,6 @@
 </span></span><span style="display:flex;"><span>from datetime import datetime
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>from celery import Celery
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span> 
 </span></span><span style="display:flex;"><span> 
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># result_address = &#39;elasticsearch://user:passwd@ip:port/index&#39;</span>
 </span></span><span style="display:flex;"><span>
