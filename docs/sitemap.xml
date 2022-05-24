@@ -12,7 +12,7 @@
   </url><url>
     <loc>https://hjkl01.github.io/python/celery/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/chrome/</loc>
+    <loc>https://hjkl01.github.io/linux/chrome/</loc>
   </url><url>
     <loc>https://hjkl01.github.io/python/databases/</loc>
   </url><url>
@@ -48,8 +48,6 @@
   </url><url>
     <loc>https://hjkl01.github.io/python/multiprocessing/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/ocr/</loc>
-  </url><url>
     <loc>https://hjkl01.github.io/docker/mysql/</loc>
   </url><url>
     <loc>https://hjkl01.github.io/linux/neovim/</loc>
@@ -59,6 +57,8 @@
     <loc>https://hjkl01.github.io/docker/nocodb/</loc>
   </url><url>
     <loc>https://hjkl01.github.io/linux/yarn_npm/</loc>
+  </url><url>
+    <loc>https://hjkl01.github.io/python/ocr/</loc>
   </url><url>
     <loc>https://hjkl01.github.io/docker/pgadmin4/</loc>
   </url><url>

@@ -8,9 +8,9 @@
 <meta name="generator" content="Hugo 0.98.0" />
 
 
-  <meta name="description" content="celery 用法     # test.py import time from datetime import datetime  from celery import Celery  # result_address = &#39;elasticsearch://user:passwd@ip:port/index&#39;  broker = &#39;redis://:passwd@ip:port/db&#39; result_address = &#34;mongodb://user:password@ip:port/db&#34;  app = Celery(&#34;tasks&#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&#34;task failed&#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&#34;json&#34;,  accept_content=[&#34;json&#34;], # Ignore other content  result_serializer=&#34;json&#34;,  timezone=&#34;Asia/Shanghai&#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&#39;tasks." />
+  <meta name="description" content="web scraper     https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn {&#34;_id&#34;:&#34;test&#34;,&#34;startUrl&#34;:[&#34;https://list.jd.com/list.html?cat=9987,653,655&#34;,&#34;https://list.jd.com/list.html?cat=9987,653,655&amp;page=2&amp;s=58&amp;click=0&#34;],&#34;selectors&#34;:[{&#34;delay&#34;:0,&#34;id&#34;:&#34;name&#34;,&#34;multiple&#34;:true,&#34;parentSelectors&#34;:[&#34;_root&#34;],&#34;selector&#34;:&#34;#J_goodsList &gt; ul &gt; li&#34;,&#34;type&#34;:&#34;SelectorElement&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;sku_name&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;a em&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;price&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34; div &gt; div.p-price &gt; strong &gt; i&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;comments&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.p-commit strong a&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;shop&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.p-shop span a&#34;,&#34;type&#34;:&#34;SelectorText&#34;}]} {&#34;_id&#34;:&#34;tianmao&#34;,&#34;startUrl&#34;:[&#34;https://list.tmall.com/search_product.htm?spm=a220m.1000858.0.0.219b2a680geXJ0&amp;s=120&amp;q=%CA%D6%BB%FA&amp;sort=s&amp;style=g&amp;from=mallfp..pc_1_searchbutton&amp;active=1&amp;type=pc#J_Filter&#34;],&#34;selectors&#34;:[{&#34;delay&#34;:0,&#34;id&#34;:&#34;sku&#34;,&#34;multiple&#34;:true,&#34;parentSelectors&#34;:[&#34;_root&#34;],&#34;selector&#34;:&#34;#J_ItemList .product&#34;,&#34;type&#34;:&#34;SelectorElement&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;name&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.productTitle a&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;price&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.productPrice em&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;shop&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;a.productShop-name&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;sales&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;span em&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;comments&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;span a[data-p]&#34;,&#34;type&#34;:&#34;SelectorText&#34;}]} chrome devtools     var result = $x(&#39;xpath&#39;).map(function(i){return i.textContent} ); copy(result); " />
 
-    <title>celery | My Note Site</title>
+    <title>chrome | My Note Site</title>
 
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
 <link
@@ -31,36 +31,36 @@
     
   <meta
     property="og:title"
-    content="celery"
+    content="chrome"
   />
   <meta property="og:site_name" content="My Note Site" />
-  <meta property="og:description" content="celery 用法     # test.py import time from datetime import datetime  from celery import Celery  # result_address = &#39;elasticsearch://user:passwd@ip:port/index&#39;  broker = &#39;redis://:passwd@ip:port/db&#39; result_address = &#34;mongodb://user:password@ip:port/db&#34;  app = Celery(&#34;tasks&#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&#34;task failed&#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&#34;json&#34;,  accept_content=[&#34;json&#34;], # Ignore other content  result_serializer=&#34;json&#34;,  timezone=&#34;Asia/Shanghai&#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&#39;tasks." />
+  <meta property="og:description" content="web scraper     https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn {&#34;_id&#34;:&#34;test&#34;,&#34;startUrl&#34;:[&#34;https://list.jd.com/list.html?cat=9987,653,655&#34;,&#34;https://list.jd.com/list.html?cat=9987,653,655&amp;page=2&amp;s=58&amp;click=0&#34;],&#34;selectors&#34;:[{&#34;delay&#34;:0,&#34;id&#34;:&#34;name&#34;,&#34;multiple&#34;:true,&#34;parentSelectors&#34;:[&#34;_root&#34;],&#34;selector&#34;:&#34;#J_goodsList &gt; ul &gt; li&#34;,&#34;type&#34;:&#34;SelectorElement&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;sku_name&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;a em&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;price&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34; div &gt; div.p-price &gt; strong &gt; i&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;comments&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.p-commit strong a&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;shop&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.p-shop span a&#34;,&#34;type&#34;:&#34;SelectorText&#34;}]} {&#34;_id&#34;:&#34;tianmao&#34;,&#34;startUrl&#34;:[&#34;https://list.tmall.com/search_product.htm?spm=a220m.1000858.0.0.219b2a680geXJ0&amp;s=120&amp;q=%CA%D6%BB%FA&amp;sort=s&amp;style=g&amp;from=mallfp..pc_1_searchbutton&amp;active=1&amp;type=pc#J_Filter&#34;],&#34;selectors&#34;:[{&#34;delay&#34;:0,&#34;id&#34;:&#34;sku&#34;,&#34;multiple&#34;:true,&#34;parentSelectors&#34;:[&#34;_root&#34;],&#34;selector&#34;:&#34;#J_ItemList .product&#34;,&#34;type&#34;:&#34;SelectorElement&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;name&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.productTitle a&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;price&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.productPrice em&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;shop&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;a.productShop-name&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;sales&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;span em&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;comments&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;span a[data-p]&#34;,&#34;type&#34;:&#34;SelectorText&#34;}]} chrome devtools     var result = $x(&#39;xpath&#39;).map(function(i){return i.textContent} ); copy(result); " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hjkl01.github.io/python/celery/" />
+<meta property="og:url" content="https://hjkl01.github.io/linux/chrome/" />
 
-<meta property="article:section" content="Python" />
+<meta property="article:section" content="Linux" />
 
 
   <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="celery" />
-  <meta name="twitter:description" content="celery 用法     # test.py import time from datetime import datetime  from celery import Celery  # result_address = &#39;elasticsearch://user:passwd@ip:port/index&#39;  broker = &#39;redis://:passwd@ip:port/db&#39; result_address = &#34;mongodb://user:password@ip:port/db&#34;  app = Celery(&#34;tasks&#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&#34;task failed&#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&#34;json&#34;,  accept_content=[&#34;json&#34;], # Ignore other content  result_serializer=&#34;json&#34;,  timezone=&#34;Asia/Shanghai&#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&#39;tasks." />
+<meta name="twitter:title" content="chrome" />
+  <meta name="twitter:description" content="web scraper     https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn {&#34;_id&#34;:&#34;test&#34;,&#34;startUrl&#34;:[&#34;https://list.jd.com/list.html?cat=9987,653,655&#34;,&#34;https://list.jd.com/list.html?cat=9987,653,655&amp;page=2&amp;s=58&amp;click=0&#34;],&#34;selectors&#34;:[{&#34;delay&#34;:0,&#34;id&#34;:&#34;name&#34;,&#34;multiple&#34;:true,&#34;parentSelectors&#34;:[&#34;_root&#34;],&#34;selector&#34;:&#34;#J_goodsList &gt; ul &gt; li&#34;,&#34;type&#34;:&#34;SelectorElement&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;sku_name&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;a em&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;price&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34; div &gt; div.p-price &gt; strong &gt; i&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;comments&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.p-commit strong a&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;shop&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;name&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.p-shop span a&#34;,&#34;type&#34;:&#34;SelectorText&#34;}]} {&#34;_id&#34;:&#34;tianmao&#34;,&#34;startUrl&#34;:[&#34;https://list.tmall.com/search_product.htm?spm=a220m.1000858.0.0.219b2a680geXJ0&amp;s=120&amp;q=%CA%D6%BB%FA&amp;sort=s&amp;style=g&amp;from=mallfp..pc_1_searchbutton&amp;active=1&amp;type=pc#J_Filter&#34;],&#34;selectors&#34;:[{&#34;delay&#34;:0,&#34;id&#34;:&#34;sku&#34;,&#34;multiple&#34;:true,&#34;parentSelectors&#34;:[&#34;_root&#34;],&#34;selector&#34;:&#34;#J_ItemList .product&#34;,&#34;type&#34;:&#34;SelectorElement&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;name&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.productTitle a&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;price&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;.productPrice em&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;shop&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;a.productShop-name&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;sales&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;span em&#34;,&#34;type&#34;:&#34;SelectorText&#34;},{&#34;delay&#34;:0,&#34;id&#34;:&#34;comments&#34;,&#34;multiple&#34;:false,&#34;parentSelectors&#34;:[&#34;sku&#34;],&#34;regex&#34;:&#34;&#34;,&#34;selector&#34;:&#34;span a[data-p]&#34;,&#34;type&#34;:&#34;SelectorText&#34;}]} chrome devtools     var result = $x(&#39;xpath&#39;).map(function(i){return i.textContent} ); copy(result); " />
 
 
   <script type="application/ld+json">
   {
       "@context": "http://schema.org",
       "@type": "TechArticle",
-      "articleSection": "Python",
-      "name": "celery",
-      "url" : "https://hjkl01.github.io/python/celery/",
-      "headline": "celery",
-      "description": "celery 用法     # test.py import time from datetime import datetime  from celery import Celery  # result_address = \u0027elasticsearch:\/\/user:passwd@ip:port\/index\u0027  broker = \u0027redis:\/\/:passwd@ip:port\/db\u0027 result_address = \u0022mongodb:\/\/user:password@ip:port\/db\u0022  app = Celery(\u0022tasks\u0022, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(\u0022task failed\u0022)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=\u0022json\u0022,  accept_content=[\u0022json\u0022], # Ignore other content  result_serializer=\u0022json\u0022,  timezone=\u0022Asia\/Shanghai\u0022,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {\u0027tasks.",
-      "wordCount" : "235",
+      "articleSection": "Linux",
+      "name": "chrome",
+      "url" : "https://hjkl01.github.io/linux/chrome/",
+      "headline": "chrome",
+      "description": "web scraper     https:\/\/chrome.google.com\/webstore\/detail\/web-scraper-free-web-scra\/jnhgnonknehpejjnehehllkliplmbmhn {\u0022_id\u0022:\u0022test\u0022,\u0022startUrl\u0022:[\u0022https:\/\/list.jd.com\/list.html?cat=9987,653,655\u0022,\u0022https:\/\/list.jd.com\/list.html?cat=9987,653,655\u0026page=2\u0026s=58\u0026click=0\u0022],\u0022selectors\u0022:[{\u0022delay\u0022:0,\u0022id\u0022:\u0022name\u0022,\u0022multiple\u0022:true,\u0022parentSelectors\u0022:[\u0022_root\u0022],\u0022selector\u0022:\u0022#J_goodsList \u003e ul \u003e li\u0022,\u0022type\u0022:\u0022SelectorElement\u0022},{\u0022delay\u0022:0,\u0022id\u0022:\u0022sku_name\u0022,\u0022multiple\u0022:false,\u0022parentSelectors\u0022:[\u0022name\u0022],\u0022regex\u0022:\u0022\u0022,\u0022selector\u0022:\u0022a em\u0022,\u0022type\u0022:\u0022SelectorText\u0022},{\u0022delay\u0022:0,\u0022id\u0022:\u0022price\u0022,\u0022multiple\u0022:false,\u0022parentSelectors\u0022:[\u0022name\u0022],\u0022regex\u0022:\u0022\u0022,\u0022selector\u0022:\u0022 div \u003e div.p-price \u003e strong \u003e i\u0022,\u0022type\u0022:\u0022SelectorText\u0022},{\u0022delay\u0022:0,\u0022id\u0022:\u0022comments\u0022,\u0022multiple\u0022:false,\u0022parentSelectors\u0022:[\u0022name\u0022],\u0022regex\u0022:\u0022\u0022,\u0022selector\u0022:\u0022.p-commit strong a\u0022,\u0022type\u0022:\u0022SelectorText\u0022},{\u0022delay\u0022:0,\u0022id\u0022:\u0022shop\u0022,\u0022multiple\u0022:false,\u0022parentSelectors\u0022:[\u0022name\u0022],\u0022regex\u0022:\u0022\u0022,\u0022selector\u0022:\u0022.p-shop span a\u0022,\u0022type\u0022:\u0022SelectorText\u0022}]} {\u0022_id\u0022:\u0022tianmao\u0022,\u0022startUrl\u0022:[\u0022https:\/\/list.tmall.com\/search_product.htm?spm=a220m.1000858.0.0.219b2a680geXJ0\u0026s=120\u0026q=%CA%D6%BB%FA\u0026sort=s\u0026style=g\u0026from=mallfp..pc_1_searchbutton\u0026active=1\u0026type=pc#J_Filter\u0022],\u0022selectors\u0022:[{\u0022delay\u0022:0,\u0022id\u0022:\u0022sku\u0022,\u0022multiple\u0022:true,\u0022parentSelectors\u0022:[\u0022_root\u0022],\u0022selector\u0022:\u0022#J_ItemList .product\u0022,\u0022type\u0022:\u0022SelectorElement\u0022},{\u0022delay\u0022:0,\u0022id\u0022:\u0022name\u0022,\u0022multiple\u0022:false,\u0022parentSelectors\u0022:[\u0022sku\u0022],\u0022regex\u0022:\u0022\u0022,\u0022selector\u0022:\u0022.productTitle a\u0022,\u0022type\u0022:\u0022SelectorText\u0022},{\u0022delay\u0022:0,\u0022id\u0022:\u0022price\u0022,\u0022multiple\u0022:false,\u0022parentSelectors\u0022:[\u0022sku\u0022],\u0022regex\u0022:\u0022\u0022,\u0022selector\u0022:\u0022.productPrice em\u0022,\u0022type\u0022:\u0022SelectorText\u0022},{\u0022delay\u0022:0,\u0022id\u0022:\u0022shop\u0022,\u0022multiple\u0022:false,\u0022parentSelectors\u0022:[\u0022sku\u0022],\u0022regex\u0022:\u0022\u0022,\u0022selector\u0022:\u0022a.productShop-name\u0022,\u0022type\u0022:\u0022SelectorText\u0022},{\u0022delay\u0022:0,\u0022id\u0022:\u0022sales\u0022,\u0022multiple\u0022:false,\u0022parentSelectors\u0022:[\u0022sku\u0022],\u0022regex\u0022:\u0022\u0022,\u0022selector\u0022:\u0022span em\u0022,\u0022type\u0022:\u0022SelectorText\u0022},{\u0022delay\u0022:0,\u0022id\u0022:\u0022comments\u0022,\u0022multiple\u0022:false,\u0022parentSelectors\u0022:[\u0022sku\u0022],\u0022regex\u0022:\u0022\u0022,\u0022selector\u0022:\u0022span a[data-p]\u0022,\u0022type\u0022:\u0022SelectorText\u0022}]} chrome devtools     var result = $x(\u0027xpath\u0027).map(function(i){return i.textContent} ); copy(result); ",
+      "wordCount" : "35",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://hjkl01.github.io/python/celery/"
+          "@id": "https://hjkl01.github.io/linux/chrome/"
       },
       "copyrightHolder" : "My Note Site",
       "copyrightYear" : "0001",
@@ -142,7 +142,7 @@
   href="/custom.css"
   media="all"
 />
-  <link href="https://hjkl01.github.io/python/celery/" rel="canonical" type="text/html" />
+  <link href="https://hjkl01.github.io/linux/chrome/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
@@ -1094,7 +1094,7 @@
                 <span class="flex">
                   <a
                     href="/linux/chrome/"
-                    class="gdoc-nav__entry"
+                    class="gdoc-nav__entry is-active"
                   >
                     chrome
                   </a>
@@ -1688,7 +1688,7 @@
                 <span class="flex">
                   <a
                     href="/python/celery/"
-                    class="gdoc-nav__entry is-active"
+                    class="gdoc-nav__entry"
                   >
                     celery
                   </a>
@@ -2206,7 +2206,7 @@
     
   
   
-    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>我的笔记</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/python/' href='/python/'><span itemprop='name'>Python</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>celery</span><meta itemprop='position' content='3' /></li>
+    <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/' href='/'><span itemprop='name'>我的笔记</span></a><meta itemprop='position' content='1' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemscope itemtype='https://schema.org/WebPage' itemprop='item' itemid='/linux/' href='/linux/'><span itemprop='name'>Linux</span></a><meta itemprop='position' content='2' /></li><li> / </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><span itemprop='name'>chrome</span><meta itemprop='position' content='3' /></li>
   
 
   
@@ -2224,117 +2224,27 @@
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>celery</h1>
+    <h1>chrome</h1>
     <div class="gdoc-page__anchorwrap">
-    <h2 id="celery-用法">
-        celery 用法
-        <a data-clipboard-text="https://hjkl01.github.io/python/celery/#celery-用法" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: celery 用法" aria-label="Anchor to: celery 用法" href="#celery-%e7%94%a8%e6%b3%95">
+    <h3 id="web-scraper">
+        web scraper
+        <a data-clipboard-text="https://hjkl01.github.io/linux/chrome/#web-scraper" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: web scraper" aria-label="Anchor to: web scraper" href="#web-scraper">
             <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
-    </h2>
+    </h3>
 </div>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># test.py</span>
-</span></span><span style="display:flex;"><span>import time
-</span></span><span style="display:flex;"><span>from datetime import datetime
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>from celery import Celery
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># result_address = &#39;elasticsearch://user:passwd@ip:port/index&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>broker <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;redis://:passwd@ip:port/db&#39;</span>
-</span></span><span style="display:flex;"><span>result_address <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mongodb://user:password@ip:port/db&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>app <span style="color:#f92672">=</span> Celery<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;tasks&#34;</span>, broker<span style="color:#f92672">=</span>broker, backend<span style="color:#f92672">=</span>result_address<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>def my_on_failure<span style="color:#f92672">(</span>exc, task_id, args, kwargs, einfo<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>    print<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;task failed&#34;</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> argv in <span style="color:#f92672">[</span>exc, task_id, args, kwargs, einfo<span style="color:#f92672">]</span>:
-</span></span><span style="display:flex;"><span>        print<span style="color:#f92672">(</span>argv<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>app.conf.update<span style="color:#f92672">(</span>
-</span></span><span style="display:flex;"><span>    task_serializer<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;json&#34;</span>,
-</span></span><span style="display:flex;"><span>    accept_content<span style="color:#f92672">=[</span><span style="color:#e6db74">&#34;json&#34;</span><span style="color:#f92672">]</span>,  <span style="color:#75715e"># Ignore other content</span>
-</span></span><span style="display:flex;"><span>    result_serializer<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;json&#34;</span>,
-</span></span><span style="display:flex;"><span>    timezone<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Asia/Shanghai&#34;</span>,
-</span></span><span style="display:flex;"><span>    enable_utc<span style="color:#f92672">=</span>True,
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  CELERY_ANNOTATIONS = {&#39;tasks.add&#39;:{&#39;rate_limit&#39;:&#39;10/s&#39;}}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  或者限制所有的任务的刷新频率</span>
-</span></span><span style="display:flex;"><span>    task_annotations<span style="color:#f92672">={</span><span style="color:#e6db74">&#34;tasks.add&#34;</span>: <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;rate_limit&#34;</span>: <span style="color:#e6db74">&#34;2/m&#34;</span><span style="color:#f92672">}}</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  annotations={&#34;tasks.add&#34;: {&#34;rate_limit&#34;: &#34;5/m&#34;, &#34;on_failure&#34;: my_on_failure}},</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  annotations={&#34;*&#34;: {&#34;rate_limit&#34;: &#34;10/s&#34;, &#34;on_failure&#34;: my_on_failure}},</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  celery worker的并发数，默认是服务器的内核数目,也是命令行-c参数指定的数目</span>
-</span></span><span style="display:flex;"><span>    worker_concurrency<span style="color:#f92672">=</span>10,
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  celery worker 每次去BROKER中预取任务的数量</span>
-</span></span><span style="display:flex;"><span>    prefetch_multiplier<span style="color:#f92672">=</span>1,
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  单个任务的运行时间限制，否则会被杀死</span>
-</span></span><span style="display:flex;"><span>    task_time_limit<span style="color:#f92672">=</span>60,
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  压缩方案选择，可以是zlib, bzip2，默认是发送没有压缩的数据</span>
-</span></span><span style="display:flex;"><span>    message_compression<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;zlib&#34;</span>,
-</span></span><span style="display:flex;"><span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>@app.task<span style="color:#f92672">(</span>default_retry_delay<span style="color:#f92672">=</span>30, max_retries<span style="color:#f92672">=</span>2, retry_kwargs<span style="color:#f92672">={</span><span style="color:#e6db74">&#34;max_retries&#34;</span>: 3<span style="color:#f92672">})</span>
-</span></span><span style="display:flex;"><span>def add<span style="color:#f92672">(</span>x, y<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>    print<span style="color:#f92672">(</span>x, y<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  time.sleep(3)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x + y
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>@app.task
-</span></span><span style="display:flex;"><span>def sleep<span style="color:#f92672">(</span>seconds<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>    time.sleep<span style="color:#f92672">(</span>seconds<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>@app.task
-</span></span><span style="display:flex;"><span>def echo<span style="color:#f92672">(</span>msg, timestamp<span style="color:#f92672">=</span>False<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>    time.sleep<span style="color:#f92672">(</span>3<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;%s: %s&#34;</span> % <span style="color:#f92672">(</span>datetime.now<span style="color:#f92672">()</span>, msg<span style="color:#f92672">)</span> <span style="color:#66d9ef">if</span> timestamp <span style="color:#66d9ef">else</span> msg
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>@app.task
-</span></span><span style="display:flex;"><span>def error<span style="color:#f92672">(</span>msg<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>    raise Exception<span style="color:#f92672">(</span>msg<span style="color:#f92672">)</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># generate.py</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># https://github.com/mher/flower/blob/master/docs/api.ipynb</span>
-</span></span><span style="display:flex;"><span>import requests
-</span></span><span style="display:flex;"><span>import json
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>def main<span style="color:#f92672">()</span>:
-</span></span><span style="display:flex;"><span>    api_root <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://localhost:5566/api&#34;</span>
-</span></span><span style="display:flex;"><span>    task_api <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;{}/task&#34;</span>.format<span style="color:#f92672">(</span>api_root<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;{}/queues/length&#34;</span>.format<span style="color:#f92672">(</span>api_root<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    print<span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    resp <span style="color:#f92672">=</span> requests.get<span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>    print<span style="color:#f92672">(</span>resp.json<span style="color:#f92672">())</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i in range<span style="color:#f92672">(</span>20<span style="color:#f92672">)</span>:
-</span></span><span style="display:flex;"><span>        args <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;args&#34;</span>: <span style="color:#f92672">[</span>i, i**i<span style="color:#f92672">]}</span>
-</span></span><span style="display:flex;"><span>        url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;{}/async-apply/tasks.add&#34;</span>.format<span style="color:#f92672">(</span>task_api<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#  url = &#34;{}/apply/tasks.add&#34;.format(task_api)</span>
-</span></span><span style="display:flex;"><span>        print<span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        resp <span style="color:#f92672">=</span> requests.post<span style="color:#f92672">(</span>url, data<span style="color:#f92672">=</span>json.dumps<span style="color:#f92672">(</span>args<span style="color:#f92672">))</span>
-</span></span><span style="display:flex;"><span>        reply <span style="color:#f92672">=</span> resp.json<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>        print<span style="color:#f92672">(</span>reply<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        args <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;args&#34;</span>: <span style="color:#f92672">[</span>i, True<span style="color:#f92672">]}</span>
-</span></span><span style="display:flex;"><span>        url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;{}/async-apply/tasks.echo&#34;</span>.format<span style="color:#f92672">(</span>task_api<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        print<span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        resp <span style="color:#f92672">=</span> requests.post<span style="color:#f92672">(</span>url, data<span style="color:#f92672">=</span>json.dumps<span style="color:#f92672">(</span>args<span style="color:#f92672">))</span>
-</span></span><span style="display:flex;"><span>        reply <span style="color:#f92672">=</span> resp.json<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>        print<span style="color:#f92672">(</span>reply<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  url = &#34;{}/result/{}&#34;.format(task_api, reply[&#34;task-id&#34;])</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  print(url)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  resp = requests.get(url)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#  print(resp.json())</span>
-</span></span><span style="display:flex;"><span>main<span style="color:#f92672">()</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>celery -A tasks worker --loglevel<span style="color:#f92672">=</span>info &gt;&gt; logs/celery_worker.log 2&gt;&amp;<span style="color:#ae81ff">1</span> &amp;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>celery -A tasks flower --loglevel<span style="color:#f92672">=</span>info --address<span style="color:#f92672">=</span>127.0.0.1 --port<span style="color:#f92672">=</span><span style="color:#ae81ff">5566</span> &gt;&gt; logs/celery_flower.log 2&gt;&amp;<span style="color:#ae81ff">1</span> &amp;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;_id&#34;</span>:<span style="color:#e6db74">&#34;test&#34;</span>,<span style="color:#f92672">&#34;startUrl&#34;</span>:[<span style="color:#e6db74">&#34;https://list.jd.com/list.html?cat=9987,653,655&#34;</span>,<span style="color:#e6db74">&#34;https://list.jd.com/list.html?cat=9987,653,655&amp;page=2&amp;s=58&amp;click=0&#34;</span>],<span style="color:#f92672">&#34;selectors&#34;</span>:[{<span style="color:#f92672">&#34;delay&#34;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;name&#34;</span>,<span style="color:#f92672">&#34;multiple&#34;</span>:<span style="color:#66d9ef">true</span>,<span style="color:#f92672">&#34;parentSelectors&#34;</span>:[<span style="color:#e6db74">&#34;_root&#34;</span>],<span style="color:#f92672">&#34;selector&#34;</span>:<span style="color:#e6db74">&#34;#J_goodsList &gt; ul &gt; li&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;SelectorElement&#34;</span>},{<span style="color:#f92672">&#34;delay&#34;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;sku_name&#34;</span>,<span style="color:#f92672">&#34;multiple&#34;</span>:<span style="color:#66d9ef">false</span>,<span style="color:#f92672">&#34;parentSelectors&#34;</span>:[<span style="color:#e6db74">&#34;name&#34;</span>],<span style="color:#f92672">&#34;regex&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;selector&#34;</span>:<span style="color:#e6db74">&#34;a em&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;SelectorText&#34;</span>},{<span style="color:#f92672">&#34;delay&#34;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;price&#34;</span>,<span style="color:#f92672">&#34;multiple&#34;</span>:<span style="color:#66d9ef">false</span>,<span style="color:#f92672">&#34;parentSelectors&#34;</span>:[<span style="color:#e6db74">&#34;name&#34;</span>],<span style="color:#f92672">&#34;regex&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;selector&#34;</span>:<span style="color:#e6db74">&#34; div &gt; div.p-price &gt; strong &gt; i&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;SelectorText&#34;</span>},{<span style="color:#f92672">&#34;delay&#34;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;comments&#34;</span>,<span style="color:#f92672">&#34;multiple&#34;</span>:<span style="color:#66d9ef">false</span>,<span style="color:#f92672">&#34;parentSelectors&#34;</span>:[<span style="color:#e6db74">&#34;name&#34;</span>],<span style="color:#f92672">&#34;regex&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;selector&#34;</span>:<span style="color:#e6db74">&#34;.p-commit strong a&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;SelectorText&#34;</span>},{<span style="color:#f92672">&#34;delay&#34;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;shop&#34;</span>,<span style="color:#f92672">&#34;multiple&#34;</span>:<span style="color:#66d9ef">false</span>,<span style="color:#f92672">&#34;parentSelectors&#34;</span>:[<span style="color:#e6db74">&#34;name&#34;</span>],<span style="color:#f92672">&#34;regex&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;selector&#34;</span>:<span style="color:#e6db74">&#34;.p-shop span a&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;SelectorText&#34;</span>}]}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;_id&#34;</span>:<span style="color:#e6db74">&#34;tianmao&#34;</span>,<span style="color:#f92672">&#34;startUrl&#34;</span>:[<span style="color:#e6db74">&#34;https://list.tmall.com/search_product.htm?spm=a220m.1000858.0.0.219b2a680geXJ0&amp;s=120&amp;q=%CA%D6%BB%FA&amp;sort=s&amp;style=g&amp;from=mallfp..pc_1_searchbutton&amp;active=1&amp;type=pc#J_Filter&#34;</span>],<span style="color:#f92672">&#34;selectors&#34;</span>:[{<span style="color:#f92672">&#34;delay&#34;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;sku&#34;</span>,<span style="color:#f92672">&#34;multiple&#34;</span>:<span style="color:#66d9ef">true</span>,<span style="color:#f92672">&#34;parentSelectors&#34;</span>:[<span style="color:#e6db74">&#34;_root&#34;</span>],<span style="color:#f92672">&#34;selector&#34;</span>:<span style="color:#e6db74">&#34;#J_ItemList .product&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;SelectorElement&#34;</span>},{<span style="color:#f92672">&#34;delay&#34;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;name&#34;</span>,<span style="color:#f92672">&#34;multiple&#34;</span>:<span style="color:#66d9ef">false</span>,<span style="color:#f92672">&#34;parentSelectors&#34;</span>:[<span style="color:#e6db74">&#34;sku&#34;</span>],<span style="color:#f92672">&#34;regex&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;selector&#34;</span>:<span style="color:#e6db74">&#34;.productTitle a&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;SelectorText&#34;</span>},{<span style="color:#f92672">&#34;delay&#34;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;price&#34;</span>,<span style="color:#f92672">&#34;multiple&#34;</span>:<span style="color:#66d9ef">false</span>,<span style="color:#f92672">&#34;parentSelectors&#34;</span>:[<span style="color:#e6db74">&#34;sku&#34;</span>],<span style="color:#f92672">&#34;regex&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;selector&#34;</span>:<span style="color:#e6db74">&#34;.productPrice em&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;SelectorText&#34;</span>},{<span style="color:#f92672">&#34;delay&#34;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;shop&#34;</span>,<span style="color:#f92672">&#34;multiple&#34;</span>:<span style="color:#66d9ef">false</span>,<span style="color:#f92672">&#34;parentSelectors&#34;</span>:[<span style="color:#e6db74">&#34;sku&#34;</span>],<span style="color:#f92672">&#34;regex&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;selector&#34;</span>:<span style="color:#e6db74">&#34;a.productShop-name&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;SelectorText&#34;</span>},{<span style="color:#f92672">&#34;delay&#34;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;sales&#34;</span>,<span style="color:#f92672">&#34;multiple&#34;</span>:<span style="color:#66d9ef">false</span>,<span style="color:#f92672">&#34;parentSelectors&#34;</span>:[<span style="color:#e6db74">&#34;sku&#34;</span>],<span style="color:#f92672">&#34;regex&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;selector&#34;</span>:<span style="color:#e6db74">&#34;span em&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;SelectorText&#34;</span>},{<span style="color:#f92672">&#34;delay&#34;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#f92672">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;comments&#34;</span>,<span style="color:#f92672">&#34;multiple&#34;</span>:<span style="color:#66d9ef">false</span>,<span style="color:#f92672">&#34;parentSelectors&#34;</span>:[<span style="color:#e6db74">&#34;sku&#34;</span>],<span style="color:#f92672">&#34;regex&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>,<span style="color:#f92672">&#34;selector&#34;</span>:<span style="color:#e6db74">&#34;span a[data-p]&#34;</span>,<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;SelectorText&#34;</span>}]}
+</span></span></code></pre></div><div class="gdoc-page__anchorwrap">
+    <h3 id="chrome-devtools">
+        chrome devtools
+        <a data-clipboard-text="https://hjkl01.github.io/linux/chrome/#chrome-devtools" class="gdoc-page__anchor gdoc-page__anchor--right clip" title="Anchor to: chrome devtools" aria-label="Anchor to: chrome devtools" href="#chrome-devtools">
+            <svg class="gdoc-icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
+        </a>
+    </h3>
+</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>var result <span style="color:#f92672">=</span> $x<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;xpath&#39;</span><span style="color:#f92672">)</span>.map<span style="color:#f92672">(</span><span style="color:#66d9ef">function</span><span style="color:#f92672">(</span>i<span style="color:#f92672">){</span><span style="color:#66d9ef">return</span> i.textContent<span style="color:#f92672">}</span> <span style="color:#f92672">)</span>; copy<span style="color:#f92672">(</span>result<span style="color:#f92672">)</span>;
 </span></span></code></pre></div>
   </article>
 
