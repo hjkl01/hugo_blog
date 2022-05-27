@@ -21,8 +21,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/arch/</guid>
-      <description>wiki     https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers
-  ⚠️ 设置root的密码       wget https://tinyurl.com/vps2arch 也会被重定向到以下 url       wget https://gitlab.com/drizzt/vps2arch/-/raw/master/vps2arch   启动脚本       sh ./vps2arch   当你从脚本默认的源下载速度较慢的时候，可以使用 -m 参数指定源，例如        (sudo) sh ./vps2arch -m https://mirrors.neusoft.edu.cn/archlinux/ sync ; reboot -f 使用 ntp     pacman -S ntp timedatectl set-ntp true # 设置时区 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime hwclock --systohc utf8       编辑 /etc/locale.</description>
+      <description>wiki https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers
+  ⚠️ 设置root的密码   wget https://tinyurl.com/vps2arch 也会被重定向到以下 url   wget https://gitlab.com/drizzt/vps2arch/-/raw/master/vps2arch   启动脚本   sh ./vps2arch   当你从脚本默认的源下载速度较慢的时候，可以使用 -m 参数指定源，例如    (sudo) sh ./vps2arch -m https://mirrors.neusoft.edu.cn/archlinux/ sync ; reboot -f 使用 ntp pacman -S ntp timedatectl set-ntp true # 设置时区 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime hwclock --systohc utf8   编辑 /etc/locale.gen 取消一下行的注释（你可能需要一个编辑器，如 vim，请自行安装）   en_GB.UTF-8 UTF-8 zh_CN.UTF-8 UTF-8 执行 locale-gen 创建 /etc/locale.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/arch-pppoe/</guid>
-      <description>pppoe 拨号     yay -S --noconfirm rp-pppoe  ifconfig # 查看对应的网卡 sudo ifconfig 网卡 down # 停止网卡服务 sudo pppoe-setup # 输入对应的用户名密码等信息 sudo pppoe-start  sudo route delete default sudo route add default ppp0 # ppp0可能是其他名字 ifconfig查看  sudo nvim /etc/resolvconf.conf # 更新name_servers sudo resolvconf -u # 更新DNS </description>
+      <description>pppoe 拨号 yay -S --noconfirm rp-pppoe  ifconfig # 查看对应的网卡 sudo ifconfig 网卡 down # 停止网卡服务 sudo pppoe-setup # 输入对应的用户名密码等信息 sudo pppoe-start  sudo route delete default sudo route add default ppp0 # ppp0可能是其他名字 ifconfig查看  sudo nvim /etc/resolvconf.conf # 更新name_servers sudo resolvconf -u # 更新DNS </description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/chrome/</guid>
-      <description>web scraper     https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn {&amp;#34;_id&amp;#34;:&amp;#34;test&amp;#34;,&amp;#34;startUrl&amp;#34;:[&amp;#34;https://list.jd.com/list.html?cat=9987,653,655&amp;#34;,&amp;#34;https://list.jd.com/list.html?cat=9987,653,655&amp;amp;page=2&amp;amp;s=58&amp;amp;click=0&amp;#34;],&amp;#34;selectors&amp;#34;:[{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;name&amp;#34;,&amp;#34;multiple&amp;#34;:true,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;_root&amp;#34;],&amp;#34;selector&amp;#34;:&amp;#34;#J_goodsList &amp;gt; ul &amp;gt; li&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorElement&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;sku_name&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;a em&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;price&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34; div &amp;gt; div.p-price &amp;gt; strong &amp;gt; i&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;comments&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.p-commit strong a&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;shop&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.p-shop span a&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;}]} {&amp;#34;_id&amp;#34;:&amp;#34;tianmao&amp;#34;,&amp;#34;startUrl&amp;#34;:[&amp;#34;https://list.tmall.com/search_product.htm?spm=a220m.1000858.0.0.219b2a680geXJ0&amp;amp;s=120&amp;amp;q=%CA%D6%BB%FA&amp;amp;sort=s&amp;amp;style=g&amp;amp;from=mallfp..pc_1_searchbutton&amp;amp;active=1&amp;amp;type=pc#J_Filter&amp;#34;],&amp;#34;selectors&amp;#34;:[{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;sku&amp;#34;,&amp;#34;multiple&amp;#34;:true,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;_root&amp;#34;],&amp;#34;selector&amp;#34;:&amp;#34;#J_ItemList .product&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorElement&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;name&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.productTitle a&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;price&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.productPrice em&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;shop&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;a.productShop-name&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;sales&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;span em&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;comments&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;span a[data-p]&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;}]} chrome devtools     var result = $x(&amp;#39;xpath&amp;#39;).map(function(i){return i.textContent} ); copy(result); </description>
+      <description>web scraper https://chrome.google.com/webstore/detail/web-scraper-free-web-scra/jnhgnonknehpejjnehehllkliplmbmhn {&amp;#34;_id&amp;#34;:&amp;#34;test&amp;#34;,&amp;#34;startUrl&amp;#34;:[&amp;#34;https://list.jd.com/list.html?cat=9987,653,655&amp;#34;,&amp;#34;https://list.jd.com/list.html?cat=9987,653,655&amp;amp;page=2&amp;amp;s=58&amp;amp;click=0&amp;#34;],&amp;#34;selectors&amp;#34;:[{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;name&amp;#34;,&amp;#34;multiple&amp;#34;:true,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;_root&amp;#34;],&amp;#34;selector&amp;#34;:&amp;#34;#J_goodsList &amp;gt; ul &amp;gt; li&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorElement&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;sku_name&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;a em&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;price&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34; div &amp;gt; div.p-price &amp;gt; strong &amp;gt; i&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;comments&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.p-commit strong a&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;shop&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;name&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.p-shop span a&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;}]} {&amp;#34;_id&amp;#34;:&amp;#34;tianmao&amp;#34;,&amp;#34;startUrl&amp;#34;:[&amp;#34;https://list.tmall.com/search_product.htm?spm=a220m.1000858.0.0.219b2a680geXJ0&amp;amp;s=120&amp;amp;q=%CA%D6%BB%FA&amp;amp;sort=s&amp;amp;style=g&amp;amp;from=mallfp..pc_1_searchbutton&amp;amp;active=1&amp;amp;type=pc#J_Filter&amp;#34;],&amp;#34;selectors&amp;#34;:[{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;sku&amp;#34;,&amp;#34;multiple&amp;#34;:true,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;_root&amp;#34;],&amp;#34;selector&amp;#34;:&amp;#34;#J_ItemList .product&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorElement&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;name&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.productTitle a&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;price&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;.productPrice em&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;shop&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;a.productShop-name&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;sales&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;span em&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;},{&amp;#34;delay&amp;#34;:0,&amp;#34;id&amp;#34;:&amp;#34;comments&amp;#34;,&amp;#34;multiple&amp;#34;:false,&amp;#34;parentSelectors&amp;#34;:[&amp;#34;sku&amp;#34;],&amp;#34;regex&amp;#34;:&amp;#34;&amp;#34;,&amp;#34;selector&amp;#34;:&amp;#34;span a[data-p]&amp;#34;,&amp;#34;type&amp;#34;:&amp;#34;SelectorText&amp;#34;}]} chrome devtools var result = $x(&amp;#39;xpath&amp;#39;).map(function(i){return i.textContent} ); copy(result); </description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/git/</guid>
-      <description>git config     # generate public key git config --global user.name &amp;#34;&amp;#34; git config --global user.email &amp;#34;&amp;#34; ssh-keygen -t rsa -b 4096 -C &amp;#34;&amp;#34;  # git config git config --global http.https://github.com.proxy socks5://127.0.0.1:1080 git config --global https.https://github.com.proxy socks5://127.0.0.1:1080  # or vi ~/.gitconfig [http &amp;#34;https://github.com&amp;#34;] proxy = socks5://127.0.0.1:1080 postBuffer = 524288000 [https &amp;#34;https://github.com&amp;#34;] proxy = socks5://127.0.0.1:1080 postBuffer = 524288000  # git submodule git submodule add https://github.com/liuyib/hexo-theme-stun/ themes/stun git submodule update --remote ssh config     # $HOME/.</description>
+      <description>git config # generate public key git config --global user.name &amp;#34;&amp;#34; git config --global user.email &amp;#34;&amp;#34; ssh-keygen -t rsa -b 4096 -C &amp;#34;&amp;#34;  # git config git config --global http.https://github.com.proxy socks5://127.0.0.1:1080 git config --global https.https://github.com.proxy socks5://127.0.0.1:1080  # or vi ~/.gitconfig [http &amp;#34;https://github.com&amp;#34;] proxy = socks5://127.0.0.1:1080 postBuffer = 524288000 [https &amp;#34;https://github.com&amp;#34;] proxy = socks5://127.0.0.1:1080 postBuffer = 524288000  # git submodule git submodule add https://github.com/liuyib/hexo-theme-stun/ themes/stun git submodule update --remote ssh config # $HOME/.</description>
     </item>
     
     <item>
@@ -58,8 +58,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/neovim/</guid>
-      <description>我的neovim配置      https://github.com/hjkl01/init.vim
- 插件     # status/tabline vim-airline/vim-airline Plug &amp;#39;vim-airline/vim-airline&amp;#39; Plug &amp;#39;vim-airline/vim-airline-themes&amp;#39; let g:airline#extensions#tabline#formatter = &amp;#39;default&amp;#39; let g:airline#extensions#tabline#enabled = 1 &amp;#34; let g:airline#extensions#tabline#left_sep = &amp;#39; &amp;#39; &amp;#34; let g:airline#extensions#tabline#left_alt_sep = &amp;#39;|&amp;#39; &amp;#34; let g:airline#extensions#tabline#enabled = 1 &amp;#34; let g:airline#extensions#tabline#tab_nr_type = 1 &amp;#34; tab number &amp;#34; let g:airline#extensions#tabline#show_tab_nr = 1 &amp;#34; let g:airline#extensions#tabline#formatter = &amp;#39;default&amp;#39; &amp;#34; let g:airline#extensions#tabline#buffer_nr_show = 0 &amp;#34; let g:airline#extensions#tabline#fnametruncate = 16 &amp;#34; let g:airline#extensions#tabline#fnamecollapse = 2 &amp;#34; let g:airline#extensions#tabline#buffer_idx_mode = 1 let g:airline_theme=&amp;#39;molokai&amp;#39; # format file Plug &amp;#39;Chiel92/vim-autoformat&amp;#39; &amp;#34; autocmd BufWrite * :Autoformat let g:autoformat_autoindent = 1 let g:autoformat_retab = 1 let g:autoformat_remove_trailing_spaces = 1   # 文件目录  Plug &amp;#39;preservim/nerdtree&amp;#39; let g:NERDTreeWinPos = &amp;#34;right&amp;#34; let NERDTreeShowHidden=1 let NERDTreeShowLineNumbers=1 let NERDTreeIgnore = [&amp;#39;\.</description>
+      <description>我的neovim配置  https://github.com/hjkl01/init.vim
+ 插件 # status/tabline vim-airline/vim-airline Plug &amp;#39;vim-airline/vim-airline&amp;#39; Plug &amp;#39;vim-airline/vim-airline-themes&amp;#39; let g:airline#extensions#tabline#formatter = &amp;#39;default&amp;#39; let g:airline#extensions#tabline#enabled = 1 &amp;#34; let g:airline#extensions#tabline#left_sep = &amp;#39; &amp;#39; &amp;#34; let g:airline#extensions#tabline#left_alt_sep = &amp;#39;|&amp;#39; &amp;#34; let g:airline#extensions#tabline#enabled = 1 &amp;#34; let g:airline#extensions#tabline#tab_nr_type = 1 &amp;#34; tab number &amp;#34; let g:airline#extensions#tabline#show_tab_nr = 1 &amp;#34; let g:airline#extensions#tabline#formatter = &amp;#39;default&amp;#39; &amp;#34; let g:airline#extensions#tabline#buffer_nr_show = 0 &amp;#34; let g:airline#extensions#tabline#fnametruncate = 16 &amp;#34; let g:airline#extensions#tabline#fnamecollapse = 2 &amp;#34; let g:airline#extensions#tabline#buffer_idx_mode = 1 let g:airline_theme=&amp;#39;molokai&amp;#39; # format file Plug &amp;#39;Chiel92/vim-autoformat&amp;#39; &amp;#34; autocmd BufWrite * :Autoformat let g:autoformat_autoindent = 1 let g:autoformat_retab = 1 let g:autoformat_remove_trailing_spaces = 1   # 文件目录  Plug &amp;#39;preservim/nerdtree&amp;#39; let g:NERDTreeWinPos = &amp;#34;right&amp;#34; let NERDTreeShowHidden=1 let NERDTreeShowLineNumbers=1 let NERDTreeIgnore = [&amp;#39;\.</description>
     </item>
     
     <item>
@@ -68,8 +68,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/nginx/</guid>
-      <description>推荐在线配置      https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN
- 静态文件     server {  listen 80;  listen [::]:80;  server_name blog.viewer.pub;  root /html/github;  location / {  index index.html index.htm;  } } 转发端口     server {  listen 80;  server_name dj.viewer.pub;   root /html/www/;  location / {  proxy_pass http://127.0.0.1:8000/;  } } 重定向     server {  listen 80;  server_name blog.</description>
+      <description>推荐在线配置  https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN
+ 静态文件 server {  listen 80;  listen [::]:80;  server_name blog.viewer.pub;  root /html/github;  location / {  index index.html index.htm;  } } 转发端口 server {  listen 80;  server_name dj.viewer.pub;   root /html/www/;  location / {  proxy_pass http://127.0.0.1:8000/;  } } 重定向 server {  listen 80;  server_name blog.viewer.pub;  rewrite ^(.*)$ https://blog.viewer.pub; #将所有HTTP请求通过rewrite指令重定向到HTTPS。 # } https证书 安装certbot yay -S --noconfirm certbot 静态文件 sudo certbot certonly -d domain --webroot -w /html/filepath/ server {  listen 443 ssl;  server_name blog.</description>
     </item>
     
     <item>
@@ -78,7 +78,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/yarn_npm/</guid>
-      <description>yarn/npm 设置国内源     # 临时 npm --registry https://registry.npm.taobao.org install express # 写入文件 yarn config set registry &amp;#39;https://registry.npm.taobao.org&amp;#39; yarn config get registry  npm config set registry https://registry.npm.taobao.org npm config get registry use yrm     npm install -g yrm # yarn global add yrm yrm ls yrm use taobao yrm test </description>
+      <description>yarn/npm 设置国内源 # 临时 npm --registry https://registry.npm.taobao.org install express # 写入文件 yarn config set registry &amp;#39;https://registry.npm.taobao.org&amp;#39; yarn config get registry  npm config set registry https://registry.npm.taobao.org npm config get registry use yrm npm install -g yrm # yarn global add yrm yrm ls yrm use taobao yrm test </description>
     </item>
     
     <item>
@@ -87,7 +87,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/proxy/</guid>
-      <description>trojan-go     brew install trojan-go  修改 /usr/local/etc/trojan-go/config.json  brew service start trojan-go glider     yay -S glider  glider -listen :1080 -forward trojan://password@ip:443  # with auth glider -listen http://user:user_passwd@:61000 -forward trojan://password@ip:443 trojan     https://github.com/trojan-gfw/trojan ### 机场推荐: https://portal.shadowsocks.nz/aff.php?aff=24252  ### 部署 https://github.com/Jrohy/trojan 旧     server:     install libsodium pip install shadowsocks pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U  # path : /etc/shadowsocks.</description>
+      <description>trojan-go brew install trojan-go  修改 /usr/local/etc/trojan-go/config.json  brew service start trojan-go glider yay -S glider  glider -listen :1080 -forward trojan://password@ip:443  # with auth glider -listen http://user:user_passwd@:61000 -forward trojan://password@ip:443 trojan https://github.com/trojan-gfw/trojan ### 机场推荐: https://portal.shadowsocks.nz/aff.php?aff=24252  ### 部署 https://github.com/Jrohy/trojan 旧 server: install libsodium pip install shadowsocks pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U  # path : /etc/shadowsocks.json {  &amp;#34;server&amp;#34;:&amp;#34;0.0.0.0&amp;#34;,  &amp;#34;port_password&amp;#34;: {  &amp;#34;8000&amp;#34;: &amp;#34;password&amp;#34;  },  &amp;#34;timeout&amp;#34;:300,  &amp;#34;method&amp;#34;:&amp;#34;chacha20-ietf-poly1305&amp;#34;,  &amp;#34;fast_open&amp;#34;:true,  &amp;#34;pid-file&amp;#34;: &amp;#34;/path/ss.</description>
     </item>
     
     <item>
@@ -96,7 +96,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/todesk/</guid>
-      <description>arch install todesk     wget https://dl.todesk.com/linux/todesk_2.0.2_x86_64.pkg.tar.zst  sudo pacman -U todesk_2.0.2_x86_64.pkg.tar.zst  sudo systemctl restart todeskd.service 详情参考: https://www.todesk.com/download_detail.html</description>
+      <description>arch install todesk wget https://dl.todesk.com/linux/todesk_2.0.2_x86_64.pkg.tar.zst  sudo pacman -U todesk_2.0.2_x86_64.pkg.tar.zst  sudo systemctl restart todeskd.service 详情参考: https://www.todesk.com/download_detail.html</description>
     </item>
     
     <item>
@@ -105,7 +105,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/samba/</guid>
-      <description>在arch 中安装参考     https://wiki.archlinux.org/title/samba 在ubuntu中安装     sudo apt-get install samba sudo useradd xxx sudo smbpasswd -a xxx sudo vi /etc/samba/smb.conf  #### 配置内加入以下内容 [dev] comment = dev path = /var/dev valid user = xxx write list = xxx create mask = 0664 directory mask = 0775 force user = xxx force group = xxx public = no available = yes browseable = yes security = user ### 重启samba【sudo service smbd restart】 </description>
+      <description>在arch 中安装参考 https://wiki.archlinux.org/title/samba 在ubuntu中安装 sudo apt-get install samba sudo useradd xxx sudo smbpasswd -a xxx sudo vi /etc/samba/smb.conf  #### 配置内加入以下内容 [dev] comment = dev path = /var/dev valid user = xxx write list = xxx create mask = 0664 directory mask = 0775 force user = xxx force group = xxx public = no available = yes browseable = yes security = user ### 重启samba【sudo service smbd restart】 </description>
     </item>
     
     <item>
@@ -114,7 +114,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/privoxy/</guid>
-      <description>socks5 转 http     privoxy 配置     yay -S privoxy  cd /etc/privoxy  (sudo) mv config config.bak (sudo) vi config  forward-socks5t / 127.0.0.1:1080 . listen-address 127.0.0.1:9888  sudo systemctl restart privoxy.service sudo systemctl enable privoxy.service </description>
+      <description>socks5 转 http privoxy 配置 yay -S privoxy  cd /etc/privoxy  (sudo) mv config config.bak (sudo) vi config  forward-socks5t / 127.0.0.1:1080 . listen-address 127.0.0.1:9888  sudo systemctl restart privoxy.service sudo systemctl enable privoxy.service </description>
     </item>
     
     <item>
@@ -123,7 +123,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/starcharts/</guid>
-      <description>星图     在markdown中的代码:     ![stars](https://starchart.cc/lesssound/pornhub.svg) example:     </description>
+      <description>星图 在markdown中的代码: ![stars](https://starchart.cc/lesssound/pornhub.svg) example: </description>
     </item>
     
     <item>
@@ -132,7 +132,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/supervisor/</guid>
-      <description>后缀为conf或ini     [program:frp_ssh]  command = /home/user/frp/frpc -c /home/user/frp/config.ini directory = /home/user/somedir user = user autostart = true autorestart = true startsecs = 3  redirect_stderr = true stdout_logfile_maxbytes = 50MB stdout_logfile_backups = 10 stdout_logfile = /home/user/frp/log </description>
+      <description>后缀为conf或ini [program:frp_ssh]  command = /home/user/frp/frpc -c /home/user/frp/config.ini directory = /home/user/somedir user = user autostart = true autorestart = true startsecs = 3  redirect_stderr = true stdout_logfile_maxbytes = 50MB stdout_logfile_backups = 10 stdout_logfile = /home/user/frp/log </description>
     </item>
     
     <item>
@@ -141,7 +141,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/switchyomega/</guid>
-      <description>config      SwitchyOmega 访问变慢
+      <description>config  SwitchyOmega 访问变慢
 关闭chrome的安全dns
 Privacy and Security -&amp;gt; Security -&amp;gt; Use Secure DNS
  参考: https://github.com/FelisCatus/SwitchyOmega/issues/1742#issuecomment-826272936</description>
@@ -153,7 +153,7 @@ Privacy and Security -&amp;gt; Security -&amp;gt; Use Secure DNS
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/ubuntu/</guid>
-      <description>中文乱码     sudo apt-get -y install language-pack-zh-hans  #写入 ~/.zshrc: LC_ALL=zh_CN.utf8 export LC_ALL  source ~/.zshrc 配置静态IP     path: `/etc/network/interface`  auto eth1 iface eth1 inet static address 192.168.56.xx netmask 255.255.255.0 network 192.168.56.0 broadcast 192.168.56.255  if possible, 配置路由器中的dhcp. ip route     sudo route add -net 66.1.254.0/24 gw 66.16.62.254 enp4s0 sudo ip addr flush dev enp4s0 安装Ubuntu 分区     efi swap	交换空间 / ext4 /boot	200M左右	ext4	/tmp	5G左右	ext4	手动配置swap内存      sudo fallocate -l 4G /swapfile sudo chmod 600 /swapfile sudo mkswap /swapfile sudo swapon /swapfile  sudo vim /etc/fstab /swapfile none swap sw 0 0 </description>
+      <description>中文乱码 sudo apt-get -y install language-pack-zh-hans  #写入 ~/.zshrc: LC_ALL=zh_CN.utf8 export LC_ALL  source ~/.zshrc 配置静态IP path: `/etc/network/interface`  auto eth1 iface eth1 inet static address 192.168.56.xx netmask 255.255.255.0 network 192.168.56.0 broadcast 192.168.56.255  if possible, 配置路由器中的dhcp. ip route sudo route add -net 66.1.254.0/24 gw 66.16.62.254 enp4s0 sudo ip addr flush dev enp4s0 安装Ubuntu 分区 efi swap	交换空间 / ext4 /boot	200M左右	ext4	/tmp	5G左右	ext4	手动配置swap内存  sudo fallocate -l 4G /swapfile sudo chmod 600 /swapfile sudo mkswap /swapfile sudo swapon /swapfile  sudo vim /etc/fstab /swapfile none swap sw 0 0 </description>
     </item>
     
     <item>
@@ -162,7 +162,8 @@ Privacy and Security -&amp;gt; Security -&amp;gt; Use Secure DNS
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/linux/vnc/</guid>
-      <description>服务端安装     # ubuntu   sudo apt-get install x11vnc   x11vnc -storepasswd   x11vnc -auth guess -once -loop -noxdamage -repeat -rfbauth ~/.vnc/passwd -rfbport 5900 -shared   x11vnc -forever   https://www.realvnc.com/en/connect/download/viewer/   # arch   yay -S x11vnc net-tools  update -&amp;gt; /etc/gdm/custom.conf:  WaylandEnable=false   x11vnc -wait 50 -noxdamage -passwd PASSWORD -display :0 -forever -o /var/log/x11vnc.log -bg 客户端      https://www.</description>
+      <description>服务端安装 # ubuntu   sudo apt-get install x11vnc   x11vnc -storepasswd   x11vnc -auth guess -once -loop -noxdamage -repeat -rfbauth ~/.vnc/passwd -rfbport 5900 -shared   x11vnc -forever   https://www.realvnc.com/en/connect/download/viewer/   # arch   yay -S x11vnc net-tools  update -&amp;gt; /etc/gdm/custom.conf:  WaylandEnable=false   x11vnc -wait 50 -noxdamage -passwd PASSWORD -display :0 -forever -o /var/log/x11vnc.log -bg 客户端  https://www.realvnc.com/
+ # 错误 # display_server_not_supported  # /etc/gdm3/custom.</description>
     </item>
     
   </channel>

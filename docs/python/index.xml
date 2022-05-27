@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/python/celery/</guid>
-      <description>celery 用法     # test.py import time from datetime import datetime  from celery import Celery  # result_address = &amp;#39;elasticsearch://user:passwd@ip:port/index&amp;#39;  broker = &amp;#39;redis://:passwd@ip:port/db&amp;#39; result_address = &amp;#34;mongodb://user:password@ip:port/db&amp;#34;  app = Celery(&amp;#34;tasks&amp;#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&amp;#34;task failed&amp;#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&amp;#34;json&amp;#34;,  accept_content=[&amp;#34;json&amp;#34;], # Ignore other content  result_serializer=&amp;#34;json&amp;#34;,  timezone=&amp;#34;Asia/Shanghai&amp;#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&amp;#39;tasks.</description>
+      <description>celery 用法 # test.py import time from datetime import datetime  from celery import Celery  # result_address = &amp;#39;elasticsearch://user:passwd@ip:port/index&amp;#39;  broker = &amp;#39;redis://:passwd@ip:port/db&amp;#39; result_address = &amp;#34;mongodb://user:password@ip:port/db&amp;#34;  app = Celery(&amp;#34;tasks&amp;#34;, broker=broker, backend=result_address)   def my_on_failure(exc, task_id, args, kwargs, einfo):  print(&amp;#34;task failed&amp;#34;)  for argv in [exc, task_id, args, kwargs, einfo]:  print(argv)   app.conf.update(  task_serializer=&amp;#34;json&amp;#34;,  accept_content=[&amp;#34;json&amp;#34;], # Ignore other content  result_serializer=&amp;#34;json&amp;#34;,  timezone=&amp;#34;Asia/Shanghai&amp;#34;,  enable_utc=True,  # 下面这个就是限制tasks模块下的add函数，每秒钟只能执行10次  # CELERY_ANNOTATIONS = {&amp;#39;tasks.</description>
     </item>
     
     <item>
@@ -21,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/python/databases/</guid>
-      <description>sqlalchemy     # pip install psycopg2-binary # sqlacodegen postgres://user:passwd@host:ip/database --outfile model.py from sqlalchemy import create_engine from sqlalchemy import Column, String from sqlalchemy.ext.declarative import declarative_base from sqlalchemy.orm import sessionmaker  db_string = &amp;#34;postgres://admin:donotusethispassword@aws-us-east-1-portal.19.dblayer.com:15813/compose&amp;#34;  db = create_engine(db_string) base = declarative_base()   class Film(base):  __tablename__ = &amp;#34;films&amp;#34;   title = Column(String, primary_key=True)  director = Column(String)  year = Column(String)   Session = sessionmaker(db) session = Session()  base.</description>
+      <description>sqlalchemy # pip install psycopg2-binary # sqlacodegen postgres://user:passwd@host:ip/database --outfile model.py from sqlalchemy import create_engine from sqlalchemy import Column, String from sqlalchemy.ext.declarative import declarative_base from sqlalchemy.orm import sessionmaker  db_string = &amp;#34;postgres://admin:donotusethispassword@aws-us-east-1-portal.19.dblayer.com:15813/compose&amp;#34;  db = create_engine(db_string) base = declarative_base()   class Film(base):  __tablename__ = &amp;#34;films&amp;#34;   title = Column(String, primary_key=True)  director = Column(String)  year = Column(String)   Session = sessionmaker(db) session = Session()  base.metadata.create_all(db)  # Create doctor_strange = Film(title=&amp;#34;Doctor Strange&amp;#34;, director=&amp;#34;Scott Derrickson&amp;#34;, year=&amp;#34;2016&amp;#34;) session.</description>
     </item>
     
     <item>
@@ -84,7 +84,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/python/ocr/</guid>
-      <description>https://github.com/breezedeus/cnocr     </description>
+      <description>https://github.com/breezedeus/cnocr </description>
     </item>
     
     <item>
@@ -102,7 +102,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/python/fastapi_mail/</guid>
-      <description>fastapi send mail API     import uvicorn from fastapi import FastAPI, BackgroundTasks, UploadFile, File, Form from starlette.responses import JSONResponse from fastapi_mail import FastMail, MessageSchema, ConnectionConfig from pydantic import BaseModel, EmailStr from typing import List, Text   class EmailSchema(BaseModel):  email: List[EmailStr]  html: Text  conf = ConnectionConfig( 	# update username, password, from  # example qq mail  # https://service.mail.qq.com/cgi-bin/help?subtype=1&amp;amp;&amp;amp;id=28&amp;amp;&amp;amp;no=1001256  MAIL_USERNAME=&amp;#34;qq123456&amp;#34;,  MAIL_PASSWORD=&amp;#34;password&amp;#34;,  MAIL_FROM=&amp;#34;qq123456@qq.</description>
+      <description>fastapi send mail API import uvicorn from fastapi import FastAPI, BackgroundTasks, UploadFile, File, Form from starlette.responses import JSONResponse from fastapi_mail import FastMail, MessageSchema, ConnectionConfig from pydantic import BaseModel, EmailStr from typing import List, Text   class EmailSchema(BaseModel):  email: List[EmailStr]  html: Text  conf = ConnectionConfig( 	# update username, password, from  # example qq mail  # https://service.mail.qq.com/cgi-bin/help?subtype=1&amp;amp;&amp;amp;id=28&amp;amp;&amp;amp;no=1001256  MAIL_USERNAME=&amp;#34;qq123456&amp;#34;,  MAIL_PASSWORD=&amp;#34;password&amp;#34;,  MAIL_FROM=&amp;#34;qq123456@qq.com&amp;#34;,  MAIL_PORT=587,  MAIL_SERVER=&amp;#34;smtp.</description>
     </item>
     
     <item>
