@@ -4,9 +4,13 @@
   <url>
     <loc>https://hjkl01.github.io/linux/adb/</loc>
   </url><url>
+    <loc>https://hjkl01.github.io/docker/hoppscotch/</loc>
+  </url><url>
     <loc>https://hjkl01.github.io/linux/arch/</loc>
   </url><url>
     <loc>https://hjkl01.github.io/linux/arch-pppoe/</loc>
+  </url><url>
+    <loc>https://hjkl01.github.io/docker/emby/</loc>
   </url><url>
     <loc>https://hjkl01.github.io/categories/</loc>
   </url><url>
@@ -29,8 +33,6 @@
     <loc>https://hjkl01.github.io/docker/gitea/</loc>
   </url><url>
     <loc>https://hjkl01.github.io/docker/gops/</loc>
-  </url><url>
-    <loc>https://hjkl01.github.io/docker/hoppscotch/</loc>
   </url><url>
     <loc>https://hjkl01.github.io/docker/httpbin/</loc>
   </url><url>
@@ -103,8 +105,6 @@
     <loc>https://hjkl01.github.io/docker/shiori/</loc>
   </url><url>
     <loc>https://hjkl01.github.io/</loc>
-  </url><url>
-    <loc>https://hjkl01.github.io/docker/emby/</loc>
   </url><url>
     <loc>https://hjkl01.github.io/docker/cloudreve/</loc>
   </url>

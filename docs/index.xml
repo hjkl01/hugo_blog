@@ -16,6 +16,15 @@
     </item>
     
     <item>
+      <title>API tool: httpbin &amp;&amp; hoppscotch</title>
+      <link>https://hjkl01.github.io/docker/hoppscotch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/docker/hoppscotch/</guid>
+      <description>docker run -p 80:80 kennethreitz/httpbin http://127.0.0.1/get?show_env=1 docker run --rm --name hoppscotch -p 3000:3000 hoppscotch/hoppscotch:latest </description>
+    </item>
+    
+    <item>
       <title>arch</title>
       <link>https://hjkl01.github.io/linux/arch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -32,6 +41,15 @@
       
       <guid>https://hjkl01.github.io/linux/arch-pppoe/</guid>
       <description>pppoe 拨号 yay -S --noconfirm rp-pppoe  ifconfig # 查看对应的网卡 sudo ifconfig 网卡 down # 停止网卡服务 sudo pppoe-setup # 输入对应的用户名密码等信息 sudo pppoe-start  sudo route delete default sudo route add default ppp0 # ppp0可能是其他名字 ifconfig查看  sudo nvim /etc/resolvconf.conf # 更新name_servers sudo resolvconf -u # 更新DNS </description>
+    </item>
+    
+    <item>
+      <title>aria2 &amp;&amp; jellyfin or embyserver </title>
+      <link>https://hjkl01.github.io/docker/emby/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/docker/emby/</guid>
+      <description>version: &amp;#34;3.8&amp;#34;  services:   Aria2-Pro:  container_name: aria2-pro  image: p3terx/aria2-pro  environment:  - PUID=65534  - PGID=65534  - UMASK_SET=022  - RPC_SECRET=update_me  - RPC_PORT=6800  - LISTEN_PORT=6888  - DISK_CACHE=64M  - IPV6_MODE=true  - UPDATE_TRACKERS=true  - CUSTOM_TRACKER_URL=  - TZ=Asia/Shanghai  volumes:  - ${PWD}/data/aria2-config:/config  # - ${PWD}/data/embyserver/movies:/downloads  - ${PWD}/data/jellyfin/movies:/downloads  ports:  - 6800:6800  - 6888:6888  - 6888:6888/udp  restart: unless-stopped  logging:  driver: json-file  options:  max-size: 1m   AriaNg:  container_name: ariang  image: p3terx/ariang  command: --port 6880 --ipv6  ports:  - 192.</description>
     </item>
     
     <item>
@@ -113,15 +131,6 @@
       
       <guid>https://hjkl01.github.io/docker/gops/</guid>
       <description>version: &amp;#39;3&amp;#39; services:  db:  image: postgres:11-alpine  restart: unless-stopped  environment:  POSTGRES_USER: &amp;#39;gogs&amp;#39;  POSTGRES_PASSWORD: &amp;#39;gogs&amp;#39;  POSTGRES_DB: &amp;#39;postgres&amp;#39;  ports:  - &amp;#34;5432:5432&amp;#34;  networks:  - gogs_net  volumes:  - ./data/postgres_data:/var/lib/postgresql/data   gogs:  image: gogs/gogs:latest  networks:  - gogs_net  depends_on:  - db  links:  - db  ports:  - &amp;#34;10022:22&amp;#34;  - &amp;#34;10080:3000&amp;#34;  restart: unless-stopped  volumes:  - .</description>
-    </item>
-    
-    <item>
-      <title>hoppscotch</title>
-      <link>https://hjkl01.github.io/docker/hoppscotch/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hjkl01.github.io/docker/hoppscotch/</guid>
-      <description>docker run --rm --name hoppscotch -p 3000:3000 hoppscotch/hoppscotch:latest </description>
     </item>
     
     <item>
@@ -407,15 +416,6 @@ Privacy and Security -&amp;gt; Security -&amp;gt; Use Secure DNS
       
       <guid>https://hjkl01.github.io/docker/shiori/</guid>
       <description># 原链接 https://github.com/go-shiori/shiori/ # loginuser: shiori  # passwd: gopher version: &amp;#34;2.1&amp;#34; services:  shiori:  image: nicholaswilde/shiori:latest  container_name: shiori-default  environment:  TZ: Asia/Shanghai  PUID: 1000  PGID: 1000  SHIORI_PG_HOST: db  SHIORI_PG_PORT: 5432  SHIORI_PG_USER: user  SHIORI_PG_PASS: password  SHIORI_PG_NAME: &amp;#34;&amp;#34;  ports:  - 8080:8080  restart: unless-stopped  volumes:  - ./data/shiori:/data  depends_on:  - db  db:  image: postgres  restart: always  environment:  POSTGRES_USER: user  POSTGRES_PASSWORD: password  volumes:  - .</description>
-    </item>
-    
-    <item>
-      <title>电影播放 embyserver 和 下载管理 aria2</title>
-      <link>https://hjkl01.github.io/docker/emby/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hjkl01.github.io/docker/emby/</guid>
-      <description>version: &amp;#34;3.8&amp;#34;  services:   Aria2-Pro:  container_name: aria2-pro  image: p3terx/aria2-pro  environment:  - PUID=65534  - PGID=65534  - UMASK_SET=022  - RPC_SECRET=update_me  - RPC_PORT=6800  - LISTEN_PORT=6888  - DISK_CACHE=64M  - IPV6_MODE=true  - UPDATE_TRACKERS=true  - CUSTOM_TRACKER_URL=  - TZ=Asia/Shanghai  volumes:  - ${PWD}/data/aria2-config:/config  - ${PWD}/data/embyserver/movies:/downloads # If you use host network mode, then no port mapping is required. # This is the easiest way to use IPv6 networks.</description>
     </item>
     
     <item>

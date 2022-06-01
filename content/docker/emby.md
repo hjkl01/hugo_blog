@@ -1,5 +1,5 @@
 ---
-title: "电影播放 embyserver 和 下载管理 aria2"
+title: "aria2 && jellyfin or embyserver "
 draft: true
 ---
 
@@ -25,29 +25,22 @@ services:
       - TZ=Asia/Shanghai
     volumes:
       - ${PWD}/data/aria2-config:/config
-      - ${PWD}/data/embyserver/movies:/downloads
-# If you use host network mode, then no port mapping is required.
-# This is the easiest way to use IPv6 networks.
-    # network_mode: host
-#    network_mode: bridge
+      # - ${PWD}/data/embyserver/movies:/downloads
+      - ${PWD}/data/jellyfin/movies:/downloads
     ports:
      - 6800:6800
      - 6888:6888
      - 6888:6888/udp
     restart: unless-stopped
-# Since Aria2 will continue to generate logs, limit the log size to 1M to prevent your hard disk from running out of space.
     logging:
       driver: json-file
       options:
         max-size: 1m
 
-# AriaNg is just a static web page, usually you only need to deploy on a single host.
   AriaNg:
     container_name: ariang
     image: p3terx/ariang
     command: --port 6880 --ipv6
-    # network_mode: host
-#    network_mode: bridge
     ports:
       - 192.168.50.4:6880:6880
     restart: unless-stopped
@@ -55,9 +48,26 @@ services:
       driver: json-file
       options:
         max-size: 1m
+```
         
         
+```sh
+version: "2.3"
+services:
+
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin_server
+    volumes:
+      - ./data/jellyfin/config:/config # Configuration directory
+      - ./data/jellyfin/cache:/cache
+      - ./data/jellyfin/movies:/media
+    ports:
+      - 8096:8096 # HTTP port
+    restart: unless-stopped
+```
         
+```sh
 version: "2.3"
 services:
   emby:
