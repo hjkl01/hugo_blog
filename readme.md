@@ -1,7 +1,9 @@
 ```sh
-mkdir -p themes/hugo-geekdoc
-curl -L https://github.com/thegeeklab/hugo-geekdoc/releases/latest/download/hugo-geekdoc.tar.gz | tar -xz -C themes/hugo-geekdoc/ --strip-components=1
+git clone https://github.com/matcornic/hugo-theme-learn.git themes/learn
 
+# start server
 hugo server -D
+
+# generate html to docs
 hugo -D
 ```

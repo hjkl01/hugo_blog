@@ -21,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/emby/</guid>
-      <description>version: &amp;#34;3.8&amp;#34;  services:   Aria2-Pro:  container_name: aria2-pro  image: p3terx/aria2-pro  environment:  - PUID=65534  - PGID=65534  - UMASK_SET=022  - RPC_SECRET=update_me  - RPC_PORT=6800  - LISTEN_PORT=6888  - DISK_CACHE=64M  - IPV6_MODE=true  - UPDATE_TRACKERS=true  - CUSTOM_TRACKER_URL=  - TZ=Asia/Shanghai  volumes:  - ${PWD}/data/aria2-config:/config  # - ${PWD}/data/embyserver/movies:/downloads  - ${PWD}/data/jellyfin/movies:/downloads  ports:  - 6800:6800  - 6888:6888  - 6888:6888/udp  restart: unless-stopped  logging:  driver: json-file  options:  max-size: 1m   AriaNg:  container_name: ariang  image: p3terx/ariang  command: --port 6880 --ipv6  ports:  - 192.</description>
+      <description>version: &amp;#34;3.8&amp;#34; services: Aria2-Pro: container_name: aria2-pro image: p3terx/aria2-pro environment: - PUID=65534 - PGID=65534 - UMASK_SET=022 - RPC_SECRET=update_me - RPC_PORT=6800 - LISTEN_PORT=6888 - DISK_CACHE=64M - IPV6_MODE=true - UPDATE_TRACKERS=true - CUSTOM_TRACKER_URL= - TZ=Asia/Shanghai volumes: - ${PWD}/data/aria2-config:/config # - ${PWD}/data/embyserver/movies:/downloads - ${PWD}/data/jellyfin/movies:/downloads ports: - 6800:6800 - 6888:6888 - 6888:6888/udp restart: unless-stopped logging: driver: json-file options: max-size: 1m AriaNg: container_name: ariang image: p3terx/ariang command: --port 6880 --ipv6 ports: - 192.168.50.4:6880:6880 restart: unless-stopped logging: driver: json-file options: max-size: 1m version: &amp;#34;2.</description>
     </item>
     
     <item>
@@ -30,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/ddns/</guid>
-      <description>version: &amp;#39;3.1&amp;#39; services:  ddns_go:  image: jeessy/ddns-go  restart: unless-stopped  network_mode: &amp;#34;host&amp;#34;  volumes:  - ./data/ddns:/root  # port: 9876   ddns:  image: sanjusss/aliyun-ddns  restart: always  network_mode: &amp;#34;host&amp;#34;  environment:  # https://usercenter.console.aliyun.com/  AKID:  AKSCT:  DOMAIN:  REDO: 30  TTL: 600  TIMEZONE: 8.0  TYPE: A,AAAA </description>
+      <description>version: &amp;#39;3.1&amp;#39; services: ddns_go: image: jeessy/ddns-go restart: unless-stopped network_mode: &amp;#34;host&amp;#34; volumes: - ./data/ddns:/root # port: 9876 ddns: image: sanjusss/aliyun-ddns restart: always network_mode: &amp;#34;host&amp;#34; environment: # https://usercenter.console.aliyun.com/ AKID: AKSCT: DOMAIN: REDO: 30 TTL: 600 TIMEZONE: 8.0 TYPE: A,AAAA </description>
     </item>
     
     <item>
@@ -39,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/gitea/</guid>
-      <description># web管理界面里 默认端口3000和22不要改 # example: ssh://git@git.hjkl01.cn:58001/user/project.git  version: &amp;#34;3&amp;#34;  networks:  gitea:  external: false  services:  server:  image: gitea/gitea:1.15.4  container_name: gitea  environment:  - USER_UID=1000  - USER_GID=1000  - DB_TYPE=postgres  - DB_HOST=db:5432  - DB_NAME=gitea  - DB_USER=username  - DB_PASSWD=password  restart: always  networks:  - gitea  volumes:  - ./data/gitea/data:/data  ports:  - &amp;#34;58000:3000&amp;#34;  - &amp;#34;58001:22&amp;#34;  depends_on:  - db   db:  image: postgres:13-alpine  restart: always  environment:  - POSTGRES_USER=username  - POSTGRES_PASSWORD=password  - POSTGRES_DB=gitea  networks:  - gitea  volumes:  - .</description>
+      <description># web管理界面里 默认端口3000和22不要改 # example: ssh://git@git.hjkl01.cn:58001/user/project.git version: &amp;#34;3&amp;#34; networks: gitea: external: false services: server: image: gitea/gitea:1.15.4 container_name: gitea environment: - USER_UID=1000 - USER_GID=1000 - DB_TYPE=postgres - DB_HOST=db:5432 - DB_NAME=gitea - DB_USER=username - DB_PASSWD=password restart: always networks: - gitea volumes: - ./data/gitea/data:/data ports: - &amp;#34;58000:3000&amp;#34; - &amp;#34;58001:22&amp;#34; depends_on: - db db: image: postgres:13-alpine restart: always environment: - POSTGRES_USER=username - POSTGRES_PASSWORD=password - POSTGRES_DB=gitea networks: - gitea volumes: - ./data/gitea/postgres:/var/lib/postgresql/data </description>
     </item>
     
     <item>
@@ -48,7 +48,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/gops/</guid>
-      <description>version: &amp;#39;3&amp;#39; services:  db:  image: postgres:11-alpine  restart: unless-stopped  environment:  POSTGRES_USER: &amp;#39;gogs&amp;#39;  POSTGRES_PASSWORD: &amp;#39;gogs&amp;#39;  POSTGRES_DB: &amp;#39;postgres&amp;#39;  ports:  - &amp;#34;5432:5432&amp;#34;  networks:  - gogs_net  volumes:  - ./data/postgres_data:/var/lib/postgresql/data   gogs:  image: gogs/gogs:latest  networks:  - gogs_net  depends_on:  - db  links:  - db  ports:  - &amp;#34;10022:22&amp;#34;  - &amp;#34;10080:3000&amp;#34;  restart: unless-stopped  volumes:  - .</description>
+      <description>version: &amp;#39;3&amp;#39; services: db: image: postgres:11-alpine restart: unless-stopped environment: POSTGRES_USER: &amp;#39;gogs&amp;#39; POSTGRES_PASSWORD: &amp;#39;gogs&amp;#39; POSTGRES_DB: &amp;#39;postgres&amp;#39; ports: - &amp;#34;5432:5432&amp;#34; networks: - gogs_net volumes: - ./data/postgres_data:/var/lib/postgresql/data gogs: image: gogs/gogs:latest networks: - gogs_net depends_on: - db links: - db ports: - &amp;#34;10022:22&amp;#34; - &amp;#34;10080:3000&amp;#34; restart: unless-stopped volumes: - ./data/gogs_data:/data:rw networks: gogs_net: driver: bridge </description>
     </item>
     
     <item>
@@ -66,7 +66,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/mongo/</guid>
-      <description># .env MONGO_ROOT_USER=username MONGO_ROOT_PASSWORD=password MONGODB_URL=mongodb://username:password@mongo:27017  version: &amp;#39;3.1&amp;#39;  services:   mongo:  image: mongo  restart: always  ports:  - 27017:27017  environment:  - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USER}  - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD}  volumes:  - ./data/mongo:/data/db   mongo-express:  image: mongo-express  restart: always  ports:  - 8081:8081  links:  - mongo  environment:  - ME_CONFIG_MONGODB_URL=${MONGODB_URL}  - ME_CONFIG_BASICAUTH_USERNAME=${MONGO_ROOT_USER}  - ME_CONFIG_BASICAUTH_PASSWORD=${MONGO_ROOT_PASSWORD} </description>
+      <description># .env MONGO_ROOT_USER=username MONGO_ROOT_PASSWORD=password MONGODB_URL=mongodb://username:password@mongo:27017 version: &amp;#39;3.1&amp;#39; services: mongo: image: mongo restart: always ports: - 27017:27017 environment: - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USER} - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD} volumes: - ./data/mongo:/data/db mongo-express: image: mongo-express restart: always ports: - 8081:8081 links: - mongo environment: - ME_CONFIG_MONGODB_URL=${MONGODB_URL} - ME_CONFIG_BASICAUTH_USERNAME=${MONGO_ROOT_USER} - ME_CONFIG_BASICAUTH_PASSWORD=${MONGO_ROOT_PASSWORD} </description>
     </item>
     
     <item>
@@ -75,7 +75,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/mysql/</guid>
-      <description>version: &amp;#39;3.1&amp;#39;  services:  db:  # We use a mariadb image which supports both amd64 &amp;amp; arm64 architecture  image: mariadb:10.6.4-focal  # If you really want to use MySQL, uncomment the following line  #image: mysql:8.0.27  command: &amp;#39;--default-authentication-plugin=mysql_native_password&amp;#39;  volumes:  - ./data/mysql:/var/lib/mysql  restart: always  environment:  - MYSQL_ROOT_PASSWORD=password  - MYSQL_DATABASE=data  - MYSQL_USER=user  - MYSQL_PASSWORD=password  - MYSQL_ROOT_HOST=%  ports:  - 3306:3306  # linux配置 /etc/mysql/my.</description>
+      <description>version: &amp;#39;3.1&amp;#39; services: db: # We use a mariadb image which supports both amd64 &amp;amp; arm64 architecture image: mariadb:10.6.4-focal # If you really want to use MySQL, uncomment the following line #image: mysql:8.0.27 command: &amp;#39;--default-authentication-plugin=mysql_native_password&amp;#39; volumes: - ./data/mysql:/var/lib/mysql restart: always environment: - MYSQL_ROOT_PASSWORD=password - MYSQL_DATABASE=data - MYSQL_USER=user - MYSQL_PASSWORD=password - MYSQL_ROOT_HOST=% ports: - 3306:3306 # linux配置 /etc/mysql/my.cnf: [client] default-character-set = utf8 [mysqld] default-storage-engine = INNODB character-set-server = utf8 collation-server = utf8_general_ci # others protected-mode yes mysqldump -u root -p --all-databases &amp;gt; data.</description>
     </item>
     
     <item>
@@ -84,7 +84,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/nocodb/</guid>
-      <description>version: &amp;#39;3.3&amp;#39;  services:  root_db:  image: postgres:13-alpine  restart: unless-stopped  ports:  - 5432:5432  command: postgres -c &amp;#39;max_connections=500&amp;#39;  environment:  POSTGRES_PASSWORD: &amp;#39;passwd&amp;#39;  POSTGRES_USER: &amp;#39;username&amp;#39;  POSTGRES_DB: &amp;#39;postgres&amp;#39;  PGDATA: &amp;#39;/var/lib/postgresql/data&amp;#39;  healthcheck:  test: pg_isready -U &amp;#34;$$POSTGRES_USER&amp;#34; -d &amp;#34;$$POSTGRES_DB&amp;#34;  interval: 10s  timeout: 2s  retries: 10  volumes:  - ./data/nocodb_pg:/var/lib/postgresql/data   nocodb:  depends_on:  root_db:  condition: service_healthy  image: nocodb/nocodb:latest  ports:  - &amp;#34;8080:8080&amp;#34;  - &amp;#34;8081:8081&amp;#34;  - &amp;#34;8082:8082&amp;#34;  - &amp;#34;8083:8083&amp;#34;  restart: always  environment:  NC_DB: &amp;#34;pg://root_db:5432?</description>
+      <description>version: &amp;#39;3.3&amp;#39; services: root_db: image: postgres:13-alpine restart: unless-stopped ports: - 5432:5432 command: postgres -c &amp;#39;max_connections=500&amp;#39; environment: POSTGRES_PASSWORD: &amp;#39;passwd&amp;#39; POSTGRES_USER: &amp;#39;username&amp;#39; POSTGRES_DB: &amp;#39;postgres&amp;#39; PGDATA: &amp;#39;/var/lib/postgresql/data&amp;#39; healthcheck: test: pg_isready -U &amp;#34;$$POSTGRES_USER&amp;#34; -d &amp;#34;$$POSTGRES_DB&amp;#34; interval: 10s timeout: 2s retries: 10 volumes: - ./data/nocodb_pg:/var/lib/postgresql/data nocodb: depends_on: root_db: condition: service_healthy image: nocodb/nocodb:latest ports: - &amp;#34;8080:8080&amp;#34; - &amp;#34;8081:8081&amp;#34; - &amp;#34;8082:8082&amp;#34; - &amp;#34;8083:8083&amp;#34; restart: always environment: NC_DB: &amp;#34;pg://root_db:5432?u=username&amp;amp;p=passwd&amp;amp;d=postgres&amp;#34; </description>
     </item>
     
     <item>
@@ -93,7 +93,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/pgadmin4/</guid>
-      <description>version: &amp;#39;3.5&amp;#39; services:  pgadmin:  container_name: pgadmin4_container  image: dpage/pgadmin4  restart: always  environment:  PGADMIN_DEFAULT_EMAIL: xx@xx.com  PGADMIN_DEFAULT_PASSWORD: password  ports:  - &amp;#34;80:80&amp;#34; </description>
+      <description>version: &amp;#39;3.5&amp;#39; services: pgadmin: container_name: pgadmin4_container image: dpage/pgadmin4 restart: always environment: PGADMIN_DEFAULT_EMAIL: xx@xx.com PGADMIN_DEFAULT_PASSWORD: password ports: - &amp;#34;80:80&amp;#34; </description>
     </item>
     
     <item>
@@ -102,7 +102,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/postgresql/</guid>
-      <description>version: &amp;#39;3&amp;#39; services:  db:  image: postgres:10-alpine  restart: always  ports:  - 5432:5432  environment:  POSTGRES_PASSWORD: &amp;#39;password&amp;#39;  POSTGRES_USER: &amp;#39;user&amp;#39;  POSTGRES_DB: &amp;#39;postgres&amp;#39;  PGDATA: &amp;#39;/var/lib/postgresql/data&amp;#39;  volumes:  - ./postgres:/var/lib/postgresql/data   admin:  image: adminer  restart: always  depends_on:  - db  ports:  - 8080:8080  # 可视化工具推荐 docker run -d -e SESSIONS=true -p 8081:8081 sosedoff/pgweb  # mac tableplus  # 在linux 中安装 sudo apt-get install postgresql-client sudo apt-get install postgresql # sudo apt-get install pgadmin3 # pgcli  sudo adduser dbuser sudo su - postgres # sudo -u postgres psql psql \password postgres CREATE USER dbuser WITH PASSWORD &amp;#39;password&amp;#39;; CREATE DATABASE exampledb OWNER dbuser; GRANT ALL PRIVILEGES ON DATABASE exampledb to dbuser;  psql -U dbuser -d exampledb -h 127.</description>
+      <description>version: &amp;#39;3&amp;#39; services: db: image: postgres:10-alpine restart: always ports: - 5432:5432 environment: POSTGRES_PASSWORD: &amp;#39;password&amp;#39; POSTGRES_USER: &amp;#39;user&amp;#39; POSTGRES_DB: &amp;#39;postgres&amp;#39; PGDATA: &amp;#39;/var/lib/postgresql/data&amp;#39; volumes: - ./postgres:/var/lib/postgresql/data admin: image: adminer restart: always depends_on: - db ports: - 8080:8080 # 可视化工具推荐 docker run -d -e SESSIONS=true -p 8081:8081 sosedoff/pgweb # mac tableplus # 在linux 中安装 sudo apt-get install postgresql-client sudo apt-get install postgresql # sudo apt-get install pgadmin3 # pgcli sudo adduser dbuser sudo su - postgres # sudo -u postgres psql psql \password postgres CREATE USER dbuser WITH PASSWORD &amp;#39;password&amp;#39;; CREATE DATABASE exampledb OWNER dbuser; GRANT ALL PRIVILEGES ON DATABASE exampledb to dbuser; psql -U dbuser -d exampledb -h 127.</description>
     </item>
     
     <item>
@@ -111,7 +111,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/prest/</guid>
-      <description># https://github.com/prest/prest#test-using-docker version: &amp;#34;3&amp;#34; services:  postgres:  image: postgres  volumes:  - &amp;#34;./data/postgres:/var/lib/postgresql/data&amp;#34;  environment:  - POSTGRES_USER=prest  - POSTGRES_DB=prest  - POSTGRES_PASSWORD=prest  ports:  - &amp;#34;5432:5432&amp;#34;  healthcheck:  test: [&amp;#34;CMD-SHELL&amp;#34;, &amp;#34;pg_isready&amp;#34;, &amp;#34;-U&amp;#34;, &amp;#34;prest&amp;#34;]  interval: 30s  retries: 3  prest:  # use latest build - analyze the risk of using this version in production  image: prest/prest  links:  - &amp;#34;postgres:postgres&amp;#34;  environment:  - PREST_DEBUG=false  - PREST_AUTH_ENABLED=true  - PREST_PG_HOST=postgres  - PREST_PG_USER=prest  - PREST_PG_PASS=prest  - PREST_PG_DATABASE=prest  - PREST_PG_PORT=5432  - PREST_SSL_MODE=disable  depends_on:  postgres:  condition: service_healthy  ports:  - &amp;#34;3000:3000&amp;#34; </description>
+      <description># https://github.com/prest/prest#test-using-docker version: &amp;#34;3&amp;#34; services: postgres: image: postgres volumes: - &amp;#34;./data/postgres:/var/lib/postgresql/data&amp;#34; environment: - POSTGRES_USER=prest - POSTGRES_DB=prest - POSTGRES_PASSWORD=prest ports: - &amp;#34;5432:5432&amp;#34; healthcheck: test: [&amp;#34;CMD-SHELL&amp;#34;, &amp;#34;pg_isready&amp;#34;, &amp;#34;-U&amp;#34;, &amp;#34;prest&amp;#34;] interval: 30s retries: 3 prest: # use latest build - analyze the risk of using this version in production image: prest/prest links: - &amp;#34;postgres:postgres&amp;#34; environment: - PREST_DEBUG=false - PREST_AUTH_ENABLED=true - PREST_PG_HOST=postgres - PREST_PG_USER=prest - PREST_PG_PASS=prest - PREST_PG_DATABASE=prest - PREST_PG_PORT=5432 - PREST_SSL_MODE=disable depends_on: postgres: condition: service_healthy ports: - &amp;#34;3000:3000&amp;#34; </description>
     </item>
     
     <item>
@@ -120,7 +120,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/redis/</guid>
-      <description># redis 及其持久化 # redis.conf requirepass 123456 appendonly yes daemonize no  version: &amp;#39;3&amp;#39; services:  redis:  image: redis  restart: unless-stopped  # command: redis-server --requirepass 123456  command: redis-server /usr/local/etc/redis/redis.conf  ports:  - 6379:6379  volumes:  - ./redis.conf:/usr/local/etc/redis/redis.conf  - ./data/redis:/data/ </description>
+      <description># redis 及其持久化 # redis.conf requirepass 123456 appendonly yes daemonize no version: &amp;#39;3&amp;#39; services: redis: image: redis restart: unless-stopped # command: redis-server --requirepass 123456 command: redis-server /usr/local/etc/redis/redis.conf ports: - 6379:6379 volumes: - ./redis.conf:/usr/local/etc/redis/redis.conf - ./data/redis:/data/ </description>
     </item>
     
     <item>
@@ -129,7 +129,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/samba/</guid>
-      <description>version: &amp;#39;3.4&amp;#39;  services:  samba:  image: dperson/samba  environment:  TZ: &amp;#39;EST5EDT&amp;#39;  networks:  - default  ports:  - &amp;#34;137:137/udp&amp;#34;  - &amp;#34;138:138/udp&amp;#34;  - &amp;#34;139:139/tcp&amp;#34;  - &amp;#34;445:445/tcp&amp;#34;  read_only: true  tmpfs:  - /tmp  restart: unless-stopped  stdin_open: true  tty: true  volumes:  - /data:/mnt:z  command: &amp;#39;-s &amp;#34;Volume;/mnt;yes;no;no;USER&amp;#34; -u &amp;#34;USER;PASSWORD&amp;#34; -p&amp;#39; </description>
+      <description>version: &amp;#39;3.4&amp;#39; services: samba: image: dperson/samba environment: TZ: &amp;#39;EST5EDT&amp;#39; networks: - default ports: - &amp;#34;137:137/udp&amp;#34; - &amp;#34;138:138/udp&amp;#34; - &amp;#34;139:139/tcp&amp;#34; - &amp;#34;445:445/tcp&amp;#34; read_only: true tmpfs: - /tmp restart: unless-stopped stdin_open: true tty: true volumes: - /data:/mnt:z command: &amp;#39;-s &amp;#34;Volume;/mnt;yes;no;no;USER&amp;#34; -u &amp;#34;USER;PASSWORD&amp;#34; -p&amp;#39; </description>
     </item>
     
     <item>
@@ -138,7 +138,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/shiori/</guid>
-      <description># 原链接 https://github.com/go-shiori/shiori/ # loginuser: shiori  # passwd: gopher version: &amp;#34;2.1&amp;#34; services:  shiori:  image: nicholaswilde/shiori:latest  container_name: shiori-default  environment:  TZ: Asia/Shanghai  PUID: 1000  PGID: 1000  SHIORI_PG_HOST: db  SHIORI_PG_PORT: 5432  SHIORI_PG_USER: user  SHIORI_PG_PASS: password  SHIORI_PG_NAME: &amp;#34;&amp;#34;  ports:  - 8080:8080  restart: unless-stopped  volumes:  - ./data/shiori:/data  depends_on:  - db  db:  image: postgres  restart: always  environment:  POSTGRES_USER: user  POSTGRES_PASSWORD: password  volumes:  - .</description>
+      <description># 原链接 https://github.com/go-shiori/shiori/ # loginuser: shiori # passwd: gopher version: &amp;#34;2.1&amp;#34; services: shiori: image: nicholaswilde/shiori:latest container_name: shiori-default environment: TZ: Asia/Shanghai PUID: 1000 PGID: 1000 SHIORI_PG_HOST: db SHIORI_PG_PORT: 5432 SHIORI_PG_USER: user SHIORI_PG_PASS: password SHIORI_PG_NAME: &amp;#34;&amp;#34; ports: - 8080:8080 restart: unless-stopped volumes: - ./data/shiori:/data depends_on: - db db: image: postgres restart: always environment: POSTGRES_USER: user POSTGRES_PASSWORD: password volumes: - ./data/shiori_postgres:/var/lib/postgresql/data </description>
     </item>
     
     <item>
@@ -147,7 +147,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hjkl01.github.io/docker/cloudreve/</guid>
-      <description># mkdir -vp cloudreve/{uploads,avatar} \  &amp;amp;&amp;amp; touch cloudreve/conf.ini \  &amp;amp;&amp;amp; touch cloudreve/cloudreve.db \  &amp;amp;&amp;amp; mkdir -p aria2/config \  &amp;amp;&amp;amp; mkdir -p data/aria2 \  &amp;amp;&amp;amp; chmod -R 777 data/aria2  version: &amp;#34;3.8&amp;#34; services:  cloudreve:  container_name: cloudreve  image: cloudreve/cloudreve:latest  restart: unless-stopped  ports:  - &amp;#34;5212:5212&amp;#34;  volumes:  - ./data/aria2/downloads:/downloads  - ./data/cloudreve/uploads:/cloudreve/uploads  - ./data/cloudreve/conf.ini:/cloudreve/conf.ini  - ./data/cloudreve/cloudreve.db:/cloudreve/cloudreve.db  - ./data/cloudreve/avatar:/cloudreve/avatar  depends_on:  - Aria2-Pro   Aria2-Pro:  container_name: aria2-pro  image: p3terx/aria2-pro  environment:  - PUID=65534  - PGID=65534  - UMASK_SET=022  - RPC_SECRET=0b5c74bcc83fc89f29b6f9f4e8a812ef87f69258  - RPC_PORT=6800  - LISTEN_PORT=6888  - DISK_CACHE=64M  - IPV6_MODE=true  - UPDATE_TRACKERS=true  # - CUSTOM_TRACKER_URL=  - TZ=Asia/Shanghai  volumes:  - .</description>
+      <description># mkdir -vp cloudreve/{uploads,avatar} \ &amp;amp;&amp;amp; touch cloudreve/conf.ini \ &amp;amp;&amp;amp; touch cloudreve/cloudreve.db \ &amp;amp;&amp;amp; mkdir -p aria2/config \ &amp;amp;&amp;amp; mkdir -p data/aria2 \ &amp;amp;&amp;amp; chmod -R 777 data/aria2 version: &amp;#34;3.8&amp;#34; services: cloudreve: container_name: cloudreve image: cloudreve/cloudreve:latest restart: unless-stopped ports: - &amp;#34;5212:5212&amp;#34; volumes: - ./data/aria2/downloads:/downloads - ./data/cloudreve/uploads:/cloudreve/uploads - ./data/cloudreve/conf.ini:/cloudreve/conf.ini - ./data/cloudreve/cloudreve.db:/cloudreve/cloudreve.db - ./data/cloudreve/avatar:/cloudreve/avatar depends_on: - Aria2-Pro Aria2-Pro: container_name: aria2-pro image: p3terx/aria2-pro environment: - PUID=65534 - PGID=65534 - UMASK_SET=022 - RPC_SECRET=0b5c74bcc83fc89f29b6f9f4e8a812ef87f69258 - RPC_PORT=6800 - LISTEN_PORT=6888 - DISK_CACHE=64M - IPV6_MODE=true - UPDATE_TRACKERS=true # - CUSTOM_TRACKER_URL= - TZ=Asia/Shanghai volumes: - .</description>
     </item>
     
   </channel>
