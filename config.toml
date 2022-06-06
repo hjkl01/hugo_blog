@@ -2,7 +2,7 @@
 baseURL = 'https://hjkl01.github.io/'
 languageCode = 'zh-hans'
 title = 'My Note Site'
-publishDir = 'docs'
+# publishDir = 'docs'
 
 theme = 'learn'
 
