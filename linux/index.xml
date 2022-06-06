@@ -36,6 +36,15 @@ sudo pacman-mirrors -i -c China 输入法 sudo pacman -Rs $(pacman -Qsq fcitx) s
     </item>
     
     <item>
+      <title>asdf</title>
+      <link>https://hjkl01.github.io/linux/asdf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hjkl01.github.io/linux/asdf/</guid>
+      <description>install asdf git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0 # add following to ~/.zshrc . $HOME/.asdf/asdf.sh install plugin asdf plugin add nodejs asdf list all nodejs asdf install nodejs lts # asdf install nodejs latest asdf list nodejs asdf global nodejs lts </description>
+    </item>
+    
+    <item>
       <title>chrome</title>
       <link>https://hjkl01.github.io/linux/chrome/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
