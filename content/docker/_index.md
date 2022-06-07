@@ -16,9 +16,24 @@ sudo usermod -aG docker $USER
 ```
 
 ## tools
-> ctop
->
-> lazydocker
+- ctop
+- lazydocker
 ```sh
 docker run -it -v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/.config/jesseduffield/lazydocker lazyteam/lazydocker
+```
+- portainer
+```sh 
+version: '3.1'
+
+services:
+
+  portainer:
+    image: portainer/portainer
+    restart: always
+    ports:
+      - 8000:8000
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data/portainer:/data
 ```
