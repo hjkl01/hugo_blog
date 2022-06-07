@@ -19,7 +19,11 @@ yay -S glider
 glider -listen :1080 -forward trojan://password@ip:443
 
 # with auth
-glider -listen http://user:user_passwd@:61000 -forward trojan://password@ip:443
+glider -listen user:user_passwd@:61000 -forward trojan://password@ip:443
+
+# or glider.conf
+listen=:1080
+forward=trojan://password@ip:443
 ```
 
 ## trojan
