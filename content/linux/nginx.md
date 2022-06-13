@@ -13,6 +13,9 @@ draft: true
 yay -S --noconfirm certbot
 sudo certbot certonly --standalone -d domain
 sudo certbot certonly -d domain --webroot -w /html/filepath/
+
+sudo crontab -e 
+15 2 * */2 * systemctl stop nginx.service && certbot renew && systemctl restart nginx.service
 ```
 
 ### 基本配置
