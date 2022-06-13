@@ -33,8 +33,22 @@ server {
     
     # django
     location /static/ {
-        alias /path/django_project/static/ ;
+        alias /home/ubuntu/djangoapp/static/; 
     }
+
+    location /media/ {
+        alias /home/ubuntu/djangoapp/media/; 
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header X-Forwarded-Host $server_name;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_redirect off;
+        add_header P3P 'CP="ALL DSP COR PSAa OUR NOR ONL UNI COM NAV"';
+        add_header Access-Control-Allow-Origin *;
+    }
+
 
     # 转发端口
     location / {
