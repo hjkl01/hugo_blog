@@ -30,6 +30,11 @@ server {
     location / {
        index index.html index.htm;
     }
+    
+    # django
+    location /static/ {
+        alias /path/django_project/static/ ;
+    }
 
     # 转发端口
     location / {
