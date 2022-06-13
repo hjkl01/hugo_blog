@@ -12,22 +12,22 @@
     <title>arch - My Note Site</title>
 
     
-    <link href="/css/nucleus.css?1655088842" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1655088842" rel="stylesheet">
-    <link href="/css/hybrid.css?1655088842" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1655088842" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1655088842" rel="stylesheet">
-    <link href="/css/auto-complete.css?1655088842" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1655088842" rel="stylesheet">
-    <link href="/css/theme.css?1655088842" rel="stylesheet">
-    <link href="/css/tabs.css?1655088842" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1655088842" rel="stylesheet">
+    <link href="/css/nucleus.css?1655108150" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1655108150" rel="stylesheet">
+    <link href="/css/hybrid.css?1655108150" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1655108150" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1655108150" rel="stylesheet">
+    <link href="/css/auto-complete.css?1655108150" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1655108150" rel="stylesheet">
+    <link href="/css/theme.css?1655108150" rel="stylesheet">
+    <link href="/css/tabs.css?1655108150" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1655108150" rel="stylesheet">
     
-    <link href="/css/theme-relearn-light.css?1655088842" rel="stylesheet">
+    <link href="/css/theme-relearn-light.css?1655108150" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1655088842"></script>
+    <script src="/js/jquery-3.3.1.min.js?1655108150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -137,14 +137,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1655088842"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1655088842"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1655108150"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1655108150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hjkl01.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1655088842"></script>
+<script type="text/javascript" src="/js/search.js?1655108150"></script>
 
     
   </div>
@@ -1354,10 +1354,12 @@
   <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#wiki">wiki</a></li>
+        <li><a href="#源设置-etcpacmandmirrorlist">源设置 /etc/pacman.d/mirrorlist</a></li>
+        <li><a href="#yay">yay</a></li>
         <li><a href="#使用-ntp">使用 ntp</a></li>
         <li><a href="#utf8">utf8</a></li>
-        <li><a href="#源设置">源设置</a></li>
+        <li><a href="#我的配置">我的配置</a></li>
         <li><a href="#输入法">输入法</a></li>
       </ul>
     </li>
@@ -1385,33 +1387,39 @@
         
 
 
-<ul>
-<li>
-<h4 id="wiki">wiki</h4>
-<p><a href="https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers">https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers</a></p>
-</li>
-<li>
+<h3 id="wiki">wiki</h3>
+<blockquote>
+<p>link: <a href="https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers">https://gitlab.com/drizzt/vps2arch/-/wikis/Tested-VPS-Providers</a></p>
+</blockquote>
+<blockquote>
 <h4 id="-设置root的密码">⚠️ 设置root的密码</h4>
-</li>
-<li>
+</blockquote>
+<blockquote>
 <h4 id="wget-httpstinyurlcomvps2arch-也会被重定向到以下-url">wget <a href="https://tinyurl.com/vps2arch">https://tinyurl.com/vps2arch</a> 也会被重定向到以下 url</h4>
-</li>
-</ul>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>wget https://gitlab.com/drizzt/vps2arch/-/raw/master/vps2arch
-</span></span></code></pre></div><ul>
-<li>
-<h5 id="启动脚本">启动脚本</h5>
-</li>
-</ul>
+</span></span></code></pre></div><blockquote>
+<h4 id="启动脚本">启动脚本</h4>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sh ./vps2arch
-</span></span></code></pre></div><ul>
-<li>
-<h5 id="当你从脚本默认的源下载速度较慢的时候可以使用--m-参数指定源例如">当你从脚本默认的源下载速度较慢的时候，可以使用 -m 参数指定源，例如</h5>
-</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>sudo<span style="color:#f92672">)</span> sh ./vps2arch -m https://mirrors.neusoft.edu.cn/archlinux/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 当你从脚本默认的源下载速度较慢的时候，可以使用 -m 参数指定源，例如</span>
+</span></span><span style="display:flex;"><span>sudo sh ./vps2arch -m https://mirrors.neusoft.edu.cn/archlinux/
 </span></span><span style="display:flex;"><span>sync ; reboot -f
+</span></span></code></pre></div><h3 id="源设置-etcpacmandmirrorlist">源设置 /etc/pacman.d/mirrorlist</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># 清华大学</span>
+</span></span><span style="display:flex;"><span>Server <span style="color:#f92672">=</span> https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 南京大学</span>
+</span></span><span style="display:flex;"><span>Server <span style="color:#f92672">=</span> https://mirror.nju.edu.cn/archlinux/$repo/os/$arch
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># or</span>
+</span></span><span style="display:flex;"><span>sudo pacman-mirrors -i -c China
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo pacman -Syy
+</span></span></code></pre></div><h3 id="yay">yay</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pacman -S --needed git base-devel
+</span></span><span style="display:flex;"><span>git clone https://aur.archlinux.org/yay-bin.git
+</span></span><span style="display:flex;"><span>cd yay-bin
+</span></span><span style="display:flex;"><span>makepkg -si
 </span></span></code></pre></div><h3 id="使用-ntp">使用 ntp</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>pacman -S ntp
 </span></span><span style="display:flex;"><span>timedatectl set-ntp true
@@ -1419,26 +1427,23 @@
 </span></span><span style="display:flex;"><span>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 </span></span><span style="display:flex;"><span>hwclock --systohc
 </span></span></code></pre></div><h3 id="utf8">utf8</h3>
-<ul>
-<li>
-<h5 id="编辑-etclocalegen-取消一下行的注释你可能需要一个编辑器如-vim请自行安装">编辑 /etc/locale.gen 取消一下行的注释（你可能需要一个编辑器，如 vim，请自行安装）</h5>
-</li>
-</ul>
+<blockquote>
+<p>编辑 /etc/locale.gen 取消一下行的注释（你可能需要一个编辑器，如 vim，请自行安装）</p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>en_GB.UTF-8 UTF-8
 </span></span><span style="display:flex;"><span>zh_CN.UTF-8 UTF-8
-</span></span></code></pre></div><pre><code>执行 locale-gen
-
-创建 /etc/locale.conf 并编辑 LANG 这一 变量，比如：
-
-LANG=zh_CN.UTF-8
-</code></pre>
-<h3 id="源设置">源设置</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>path : /etc/pacman.conf
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>archlinuxcn<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>Server <span style="color:#f92672">=</span> https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-</span></span></code></pre></div><p>or</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo pacman-mirrors -i -c China
-</span></span></code></pre></div><h3 id="输入法">输入法</h3>
+</span></span></code></pre></div><blockquote>
+<p>执行 locale-gen</p>
+</blockquote>
+<blockquote>
+<p>创建 /etc/locale.conf 并编辑 LANG 这一 变量，比如：</p>
+</blockquote>
+<blockquote>
+<p>LANG=zh_CN.UTF-8</p>
+</blockquote>
+<h3 id="我的配置">我的配置</h3>
+<pre tabindex="0"><code>https://github.com/hjkl01/dotfiles
+</code></pre><h3 id="输入法">输入法</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo pacman -Rs <span style="color:#66d9ef">$(</span>pacman -Qsq fcitx<span style="color:#66d9ef">)</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>sudo pacman -S fcitx5 fcitx5-configtool fcitx5-qt fcitx5-gtk fcitx5-chinese-addons
@@ -2323,16 +2328,16 @@ LANG=zh_CN.UTF-8
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1655088842"></script>
-    <script src="/js/perfect-scrollbar.min.js?1655088842"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1655088842"></script>
-    <script src="/js/jquery.sticky.js?1655088842"></script>
-    <script src="/js/featherlight.min.js?1655088842"></script>
-    <script src="/js/highlight.pack.js?1655088842"></script>
+    <script src="/js/clipboard.min.js?1655108150"></script>
+    <script src="/js/perfect-scrollbar.min.js?1655108150"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1655108150"></script>
+    <script src="/js/jquery.sticky.js?1655108150"></script>
+    <script src="/js/featherlight.min.js?1655108150"></script>
+    <script src="/js/highlight.pack.js?1655108150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1655088842"></script>
-    <script src="/js/learn.js?1655088842"></script>
-    <script src="/js/hugo-learn.js?1655088842"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1655108150"></script>
+    <script src="/js/learn.js?1655108150"></script>
+    <script src="/js/hugo-learn.js?1655108150"></script>
     
         
             <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
