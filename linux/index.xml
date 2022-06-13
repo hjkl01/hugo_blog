@@ -79,7 +79,7 @@ sudo pacman-mirrors -i -c China 输入法 sudo pacman -Rs $(pacman -Qsq fcitx) s
       
       <guid>https://hjkl01.github.io/linux/nginx/</guid>
       <description>推荐在线配置 https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN
-https证书 # 安装certbot yay -S --noconfirm certbot sudo certbot certonly --standalone -d domain sudo certbot certonly -d domain --webroot -w /html/filepath/ sudo crontab -e 15 2 * */2 * systemctl stop nginx.service &amp;amp;&amp;amp; certbot renew &amp;amp;&amp;amp; systemctl restart nginx.service 基本配置 server { listen 80; listen [::]:80; server_name blog.hjkl01.cn; # 静态文件 root /html/github; location / { index index.html index.htm; } # django location /static/ { alias /path/django_project/static/ ; } # 转发端口 location / { proxy_pass http://127.</description>
+https证书 # 安装certbot yay -S --noconfirm certbot sudo certbot certonly --standalone -d domain sudo certbot certonly -d domain --webroot -w /html/filepath/ sudo crontab -e 15 2 * */2 * systemctl stop nginx.service &amp;amp;&amp;amp; certbot renew &amp;amp;&amp;amp; systemctl restart nginx.service 基本配置 server { listen 80; listen [::]:80; server_name blog.hjkl01.cn; # 静态文件 root /html/github; location / { index index.html index.htm; } # django location /static/ { alias /home/ubuntu/djangoapp/static/; } location /media/ { alias /home/ubuntu/djangoapp/media/; } location / { proxy_pass http://127.</description>
     </item>
     
     <item>
