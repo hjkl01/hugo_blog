@@ -4,10 +4,21 @@ draft: true
 ---
 
 ```sh
-docker run -p 80:80 kennethreitz/httpbin
-http://127.0.0.1/get?show_env=1
-```
+version: '3.1'
 
-```sh
-docker run --rm --name hoppscotch -p 3000:3000 hoppscotch/hoppscotch:latest
+services:
+
+  httpbin:
+    image: kennethreitz/httpbin
+    container_name: httpbin
+    restart: always
+    ports:
+      - "127.0.0.1:7999:80"
+
+  hoppscotch:
+    image: hoppscotch/hoppscotch:latest
+    container_name: hoppscotch
+    restart: always
+    ports:
+      - "127.0.0.1:3000:3000"
 ```
