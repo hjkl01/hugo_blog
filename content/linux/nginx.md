@@ -4,7 +4,7 @@ draft: true
 ---
 
 ### 推荐在线配置
-> https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN
+    https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN
 
 ### https证书
 
