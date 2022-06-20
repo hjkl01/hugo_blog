@@ -1,12 +1,15 @@
-# baseURL = 'http://note.hjkl01.cn/'
-baseURL = 'https://hjkl01.github.io/'
+baseURL = '/'
 languageCode = 'zh-hans'
 title = 'My Note Site'
 # publishDir = 'docs'
 
 theme = 'learn'
 
+# docs: https://learn.netlify.app/en/shortcodes/tabs/
 [params]
+  landingPageURL = "/"
+  landingPageName = "<i class='fas fa-home'></i> Home"
+
   # This controls whether submenus will be expanded (true), or collapsed (false) in the
   # menu; if no setting is given, the first menu level is set to false, all others to true;
   # this can be overridden in the pages frontmatter
@@ -18,7 +21,7 @@ theme = 'learn'
   # Author of the site, will be used in meta information
   author = "https://github.com/hjkl01"
   # Description of the site, will be used in meta information
-  description = ""
+  description = "description"
   # Shows a checkmark for visited pages on the menu
   showVisitedLinks = true
   # Disable search function. It will hide search bar
@@ -63,13 +66,29 @@ theme = 'learn'
   # this can be overridden in the pages frontmatter
   ordersectionsby = "weight"
   # Change default color scheme with a variant one. Eg. can be "red", "blue", "green" or an array like [ "blue", "green" ].
-  themeVariant = "relearn-light"
+  # themeVariant = "relearn-light"
+  themeVariant = "blue"
   # Change the title separator. Default to "::".
   titleSeparator = "-"
   # If set to true, the menu in the sidebar will be displayed in a collapsible tree view.
   collapsibleMenu = true
 
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+# https://fontawesome.com/v5/icons/map-marker-alt?s=solid
 [[menu.shortcuts]]
-name = "<h3 class='fab fa-github'></h3>"
+name = "<i class='fab fa-github'></i> Github repo"
 url = "https://github.com/hjkl01"
-weight = 50
+weight = 9
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-map-marker-alt'></i> Note mirror"
+url = "https://blog.hjkl01.cn"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bookmark'></i> Hugo Documentation"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20

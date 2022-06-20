@@ -5,6 +5,7 @@ draft: true
 
 ### 推荐在线配置
     https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN
+    {{% button href="https://digitalocean.github.io/nginxconfig.io/" icon="fas fa-download" %}} click it {{% /button %}}
 
 ### https证书
 
