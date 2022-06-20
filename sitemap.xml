@@ -2,110 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hjkl01.github.io/linux/adb/</loc>
+    <loc>/linux/adb/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/hoppscotch/</loc>
+    <loc>/docker/hoppscotch/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/arch/</loc>
+    <loc>/linux/arch/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/arch-pppoe/</loc>
+    <loc>/linux/arch-pppoe/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/emby/</loc>
+    <loc>/docker/emby/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/asdf/</loc>
+    <loc>/linux/asdf/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/celery/</loc>
+    <loc>/python/celery/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/chrome/</loc>
+    <loc>/linux/chrome/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/databases/</loc>
+    <loc>/python/databases/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/ddns/</loc>
+    <loc>/docker/ddns/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/django/</loc>
+    <loc>/python/django/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/</loc>
+    <loc>/docker/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/fastapi/</loc>
+    <loc>/python/fastapi/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/git/</loc>
+    <loc>/linux/git/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/gitea/</loc>
+    <loc>/docker/gitea/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/gops/</loc>
+    <loc>/docker/gops/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/jupyter/</loc>
+    <loc>/python/jupyter/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/</loc>
+    <loc>/linux/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/mac/</loc>
+    <loc>/mac/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/mitmproxy/</loc>
+    <loc>/python/mitmproxy/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/mongo/</loc>
+    <loc>/python/mongo/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/mongo/</loc>
+    <loc>/docker/mongo/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/multiprocessing/</loc>
+    <loc>/python/multiprocessing/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/mysql/</loc>
+    <loc>/docker/mysql/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/neovim/</loc>
+    <loc>/linux/neovim/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/nginx/</loc>
+    <loc>/linux/nginx/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/nocodb/</loc>
+    <loc>/docker/nocodb/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/yarn_npm/</loc>
+    <loc>/linux/yarn_npm/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/ocr/</loc>
+    <loc>/python/ocr/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/pgadmin4/</loc>
+    <loc>/docker/pgadmin4/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/pip/</loc>
+    <loc>/python/pip/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/postgresql/</loc>
+    <loc>/docker/postgresql/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/prest/</loc>
+    <loc>/docker/prest/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/proxy/</loc>
+    <loc>/linux/proxy/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/</loc>
+    <loc>/python/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/fastapi_mail/</loc>
+    <loc>/python/fastapi_mail/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/redis/</loc>
+    <loc>/docker/redis/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/todesk/</loc>
+    <loc>/linux/todesk/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/samba/</loc>
+    <loc>/docker/samba/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/samba/</loc>
+    <loc>/linux/samba/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/settings/</loc>
+    <loc>/python/settings/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/privoxy/</loc>
+    <loc>/linux/privoxy/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/python/spider/</loc>
+    <loc>/python/spider/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/starcharts/</loc>
+    <loc>/linux/starcharts/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/supervisor/</loc>
+    <loc>/linux/supervisor/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/switchyomega/</loc>
+    <loc>/linux/switchyomega/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/tags/</loc>
+    <loc>/tags/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/ubuntu/</loc>
+    <loc>/linux/ubuntu/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/linux/vnc/</loc>
+    <loc>/linux/vnc/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/shiori/</loc>
+    <loc>/docker/shiori/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/</loc>
+    <loc>/</loc>
   </url><url>
-    <loc>https://hjkl01.github.io/docker/cloudreve/</loc>
+    <loc>/docker/cloudreve/</loc>
   </url>
 </urlset>
