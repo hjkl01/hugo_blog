@@ -65,7 +65,8 @@ server {
 ### ssl
 ```sh
 server {
-    listen 443 ssl;
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
     server_name blog.hjkl01.cn;
 
     ssl_certificate /etc/letsencrypt/live/blog.hjkl01.cn/fullchain.pem;
