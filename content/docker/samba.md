@@ -1,8 +1,9 @@
 ---
-title: "samba"
+title: "samba && nfs"
 draft: true
 ---
 
+### samba
 ```sh
 version: '3.4'
 
@@ -27,4 +28,22 @@ services:
     volumes:
       - /data:/mnt:z
     command: '-s "Volume;/mnt;yes;no;no;USER" -u "USER;PASSWORD" -p'
-   ```
+```
+
+### nfs
+```sh 
+version: "2.1"
+services:
+  # https://hub.docker.com/r/itsthenetwork/nfs-server-alpine
+  nfs:
+    image: itsthenetwork/nfs-server-alpine:12
+    container_name: nfs
+    restart: unless-stopped
+    privileged: true
+    environment:
+      - SHARED_DIRECTORY=/data
+    volumes:
+      - ./data/jellyfin/movies:/data
+    ports:
+      - 2049:2049
+```
