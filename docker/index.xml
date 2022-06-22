@@ -115,12 +115,12 @@
     </item>
     
     <item>
-      <title>samba</title>
+      <title>samba &amp;&amp; nfs</title>
       <link>/docker/samba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docker/samba/</guid>
-      <description>version: &amp;#39;3.4&amp;#39; services: samba: image: dperson/samba environment: TZ: &amp;#39;EST5EDT&amp;#39; networks: - default ports: - &amp;#34;137:137/udp&amp;#34; - &amp;#34;138:138/udp&amp;#34; - &amp;#34;139:139/tcp&amp;#34; - &amp;#34;445:445/tcp&amp;#34; read_only: true tmpfs: - /tmp restart: unless-stopped stdin_open: true tty: true volumes: - /data:/mnt:z command: &amp;#39;-s &amp;#34;Volume;/mnt;yes;no;no;USER&amp;#34; -u &amp;#34;USER;PASSWORD&amp;#34; -p&amp;#39; </description>
+      <description>samba version: &amp;#39;3.4&amp;#39; services: samba: image: dperson/samba environment: TZ: &amp;#39;EST5EDT&amp;#39; networks: - default ports: - &amp;#34;137:137/udp&amp;#34; - &amp;#34;138:138/udp&amp;#34; - &amp;#34;139:139/tcp&amp;#34; - &amp;#34;445:445/tcp&amp;#34; read_only: true tmpfs: - /tmp restart: unless-stopped stdin_open: true tty: true volumes: - /data:/mnt:z command: &amp;#39;-s &amp;#34;Volume;/mnt;yes;no;no;USER&amp;#34; -u &amp;#34;USER;PASSWORD&amp;#34; -p&amp;#39; nfs version: &amp;#34;2.1&amp;#34; services: # https://hub.docker.com/r/itsthenetwork/nfs-server-alpine nfs: image: itsthenetwork/nfs-server-alpine:12 container_name: nfs restart: unless-stopped privileged: true environment: - SHARED_DIRECTORY=/data volumes: - ./data/jellyfin/movies:/data ports: - 2049:2049 </description>
     </item>
     
     <item>

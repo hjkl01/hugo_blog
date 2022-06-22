@@ -80,9 +80,9 @@
   </url><url>
     <loc>/linux/todesk/</loc>
   </url><url>
-    <loc>/docker/samba/</loc>
-  </url><url>
     <loc>/linux/samba/</loc>
+  </url><url>
+    <loc>/docker/samba/</loc>
   </url><url>
     <loc>/python/settings/</loc>
   </url><url>

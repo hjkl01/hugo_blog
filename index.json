@@ -186,7 +186,7 @@
 	"title": "nginx",
 	"tags": [],
 	"description": "",
-	"content": "推荐在线配置 https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN click it https证书 # 安装certbot yay -S --noconfirm certbot sudo certbot certonly --standalone -d domain sudo certbot certonly -d domain --webroot -w /html/filepath/ sudo crontab -e 15 2 * */2 * systemctl stop nginx.service \u0026amp;\u0026amp; certbot renew \u0026amp;\u0026amp; systemctl restart nginx.service 基本配置 server { listen 80; listen [::]:80; server_name blog.hjkl01.cn; # 静态文件 root /html/github; location / { index index.html index.htm; } # django location /static/ { alias /home/ubuntu/djangoapp/static/; } location /media/ { alias /home/ubuntu/djangoapp/media/; } location / { proxy_pass http://127.0.0.1:8000; proxy_set_header X-Forwarded-Host $server_name; proxy_set_header X-Real-IP $remote_addr; proxy_redirect off; add_header P3P \u0026#39;CP=\u0026#34;ALL DSP COR PSAa OUR NOR ONL UNI COM NAV\u0026#34;\u0026#39;; add_header Access-Control-Allow-Origin *; } # 转发端口 location / { proxy_pass http://127.0.0.1:8000/; } # 重定向 return 301 https://$host$request_uri; # rewrite ^(.*)$ https://blog.hjkl01.cn; #将所有HTTP请求通过rewrite指令重定向到HTTPS。 } ssl server { listen 443 ssl; server_name blog.hjkl01.cn; ssl_certificate /etc/letsencrypt/live/blog.hjkl01.cn/fullchain.pem; ssl_certificate_key /etc/letsencrypt/live/blog.hjkl01.cn/privkey.pem; ssl_trusted_certificate /etc/letsencrypt/live/blog.hjkl01.cn/chain.pem; ssl_session_timeout 5m; ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; ssl_prefer_server_ciphers on; # 静态文件 location / { root /html/github; #站点目录。 index index.html index.htm; } # 转发端口 location / { proxy_pass http://127.0.0.1:8080/; } } 转发mongo端口(TCP) stream { server { listen \u0026lt;your incoming Mongo TCP port\u0026gt;; proxy_connect_timeout 1s; proxy_timeout 3s; proxy_pass stream_mongo_backend; } upstream stream_mongo_backend { server \u0026lt;localhost:your local Mongo TCP port\u0026gt;; } } "
+	"content": "推荐在线配置 https://digitalocean.github.io/nginxconfig.io/?global.app.lang=zhCN click it https证书 # 安装certbot yay -S --noconfirm certbot sudo certbot certonly --standalone -d domain sudo certbot certonly -d domain --webroot -w /html/filepath/ sudo crontab -e 15 2 * */2 * systemctl stop nginx.service \u0026amp;\u0026amp; certbot renew \u0026amp;\u0026amp; systemctl restart nginx.service 基本配置 server { listen 80; listen [::]:80; server_name blog.hjkl01.cn; # 静态文件 root /html/github; location / { index index.html index.htm; } # django location /static/ { alias /home/ubuntu/djangoapp/static/; } location /media/ { alias /home/ubuntu/djangoapp/media/; } location / { proxy_pass http://127.0.0.1:8000; proxy_set_header X-Forwarded-Host $server_name; proxy_set_header X-Real-IP $remote_addr; proxy_redirect off; add_header P3P \u0026#39;CP=\u0026#34;ALL DSP COR PSAa OUR NOR ONL UNI COM NAV\u0026#34;\u0026#39;; add_header Access-Control-Allow-Origin *; } # 转发端口 location / { proxy_pass http://127.0.0.1:8000/; } # 重定向 return 301 https://$host$request_uri; # rewrite ^(.*)$ https://blog.hjkl01.cn; #将所有HTTP请求通过rewrite指令重定向到HTTPS。 } ssl server { listen 443 ssl http2; listen [::]:443 ssl http2; server_name blog.hjkl01.cn; ssl_certificate /etc/letsencrypt/live/blog.hjkl01.cn/fullchain.pem; ssl_certificate_key /etc/letsencrypt/live/blog.hjkl01.cn/privkey.pem; ssl_trusted_certificate /etc/letsencrypt/live/blog.hjkl01.cn/chain.pem; ssl_session_timeout 5m; ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; ssl_prefer_server_ciphers on; # 静态文件 location / { root /html/github; #站点目录。 index index.html index.htm; } # 转发端口 location / { proxy_pass http://127.0.0.1:8080/; } } 转发mongo端口(TCP) stream { server { listen \u0026lt;your incoming Mongo TCP port\u0026gt;; proxy_connect_timeout 1s; proxy_timeout 3s; proxy_pass stream_mongo_backend; } upstream stream_mongo_backend { server \u0026lt;localhost:your local Mongo TCP port\u0026gt;; } } "
 },
 {
 	"uri": "/docker/nocodb/",
@@ -273,18 +273,18 @@
 	"content": "arch install todesk wget https://dl.todesk.com/linux/todesk_2.0.2_x86_64.pkg.tar.zst sudo pacman -U todesk_2.0.2_x86_64.pkg.tar.zst sudo systemctl restart todeskd.service 详情参考: https://www.todesk.com/download_detail.html\n"
 },
 {
-	"uri": "/docker/samba/",
-	"title": "samba",
-	"tags": [],
-	"description": "",
-	"content": "version: \u0026#39;3.4\u0026#39; services: samba: image: dperson/samba environment: TZ: \u0026#39;EST5EDT\u0026#39; networks: - default ports: - \u0026#34;137:137/udp\u0026#34; - \u0026#34;138:138/udp\u0026#34; - \u0026#34;139:139/tcp\u0026#34; - \u0026#34;445:445/tcp\u0026#34; read_only: true tmpfs: - /tmp restart: unless-stopped stdin_open: true tty: true volumes: - /data:/mnt:z command: \u0026#39;-s \u0026#34;Volume;/mnt;yes;no;no;USER\u0026#34; -u \u0026#34;USER;PASSWORD\u0026#34; -p\u0026#39; "
-},
-{
 	"uri": "/linux/samba/",
 	"title": "samba",
 	"tags": [],
 	"description": "",
 	"content": "在arch 中安装参考 https://wiki.archlinux.org/title/samba 在ubuntu中安装 sudo apt-get install samba sudo useradd xxx sudo smbpasswd -a xxx sudo vi /etc/samba/smb.conf #### 配置内加入以下内容 [dev] comment = dev path = /var/dev valid user = xxx write list = xxx create mask = 0664 directory mask = 0775 force user = xxx force group = xxx public = no available = yes browseable = yes security = user ### 重启samba【sudo service smbd restart】 "
+},
+{
+	"uri": "/docker/samba/",
+	"title": "samba &amp;&amp; nfs",
+	"tags": [],
+	"description": "",
+	"content": "samba version: \u0026#39;3.4\u0026#39; services: samba: image: dperson/samba environment: TZ: \u0026#39;EST5EDT\u0026#39; networks: - default ports: - \u0026#34;137:137/udp\u0026#34; - \u0026#34;138:138/udp\u0026#34; - \u0026#34;139:139/tcp\u0026#34; - \u0026#34;445:445/tcp\u0026#34; read_only: true tmpfs: - /tmp restart: unless-stopped stdin_open: true tty: true volumes: - /data:/mnt:z command: \u0026#39;-s \u0026#34;Volume;/mnt;yes;no;no;USER\u0026#34; -u \u0026#34;USER;PASSWORD\u0026#34; -p\u0026#39; nfs version: \u0026#34;2.1\u0026#34; services: # https://hub.docker.com/r/itsthenetwork/nfs-server-alpine nfs: image: itsthenetwork/nfs-server-alpine:12 container_name: nfs restart: unless-stopped privileged: true environment: - SHARED_DIRECTORY=/data volumes: - ./data/jellyfin/movies:/data ports: - 2049:2049 "
 },
 {
 	"uri": "/python/settings/",
