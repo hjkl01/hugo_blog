@@ -48,3 +48,28 @@ services:
       - ./data/aria2/downloads:/downloads
     restart: unless-stopped
 ``` 
+
+```sh 
+# nginx config 
+server {
+    listen 15212 ssl http2;
+    listen [::]:15212 ssl http2;
+    server_name hjkl01.cn;
+
+    ssl_certificate  /etc/nginx/cert/hjkl01.cn_nginx/hjkl01.cn_bundle.crt;
+    ssl_certificate_key /etc/nginx/cert/hjkl01.cn_nginx/hjkl01.cn.key;
+    ssl_session_timeout 5m;
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_prefer_server_ciphers on;
+
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+    client_max_body_size 90000m;
+
+    location / {
+        proxy_pass http://192.168.50.4:5212;
+    }
+}
+```
