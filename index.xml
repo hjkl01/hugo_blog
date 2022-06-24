@@ -80,6 +80,15 @@
     </item>
     
     <item>
+      <title>cloudreve 网盘</title>
+      <link>/docker/cloudreve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docker/cloudreve/</guid>
+      <description># mkdir -vp cloudreve/{uploads,avatar} \ &amp;amp;&amp;amp; touch cloudreve/conf.ini \ &amp;amp;&amp;amp; touch cloudreve/cloudreve.db \ &amp;amp;&amp;amp; mkdir -p aria2/config \ &amp;amp;&amp;amp; mkdir -p data/aria2 \ &amp;amp;&amp;amp; chmod -R 777 data/aria2 version: &amp;#34;3.8&amp;#34; services: cloudreve: container_name: cloudreve image: cloudreve/cloudreve:latest restart: unless-stopped ports: - &amp;#34;5212:5212&amp;#34; volumes: - ./data/aria2/downloads:/downloads - ./data/cloudreve/uploads:/cloudreve/uploads - ./data/cloudreve/conf.ini:/cloudreve/conf.ini - ./data/cloudreve/cloudreve.db:/cloudreve/cloudreve.db - ./data/cloudreve/avatar:/cloudreve/avatar depends_on: - Aria2-Pro Aria2-Pro: container_name: aria2-pro image: p3terx/aria2-pro environment: - PUID=65534 - PGID=65534 - UMASK_SET=022 - RPC_SECRET=0b5c74bcc83fc89f29b6f9f4e8a812ef87f69258 - RPC_PORT=6800 - LISTEN_PORT=6888 - DISK_CACHE=64M - IPV6_MODE=true - UPDATE_TRACKERS=true # - CUSTOM_TRACKER_URL= - TZ=Asia/Shanghai volumes: - .</description>
+    </item>
+    
+    <item>
       <title>database</title>
       <link>/python/databases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -342,6 +351,15 @@
     </item>
     
     <item>
+      <title>shiori 书签管理器</title>
+      <link>/docker/shiori/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docker/shiori/</guid>
+      <description># 原链接 https://github.com/go-shiori/shiori/ # loginuser: shiori # passwd: gopher version: &amp;#34;2.1&amp;#34; services: shiori: image: nicholaswilde/shiori:latest container_name: shiori-default environment: TZ: Asia/Shanghai PUID: 1000 PGID: 1000 SHIORI_PG_HOST: db SHIORI_PG_PORT: 5432 SHIORI_PG_USER: user SHIORI_PG_PASS: password SHIORI_PG_NAME: &amp;#34;&amp;#34; ports: - 8080:8080 restart: unless-stopped volumes: - ./data/shiori:/data depends_on: - db db: image: postgres restart: always environment: POSTGRES_USER: user POSTGRES_PASSWORD: password volumes: - ./data/shiori_postgres:/var/lib/postgresql/data </description>
+    </item>
+    
+    <item>
       <title>socks5 转 http 之 privoxy</title>
       <link>/linux/privoxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -406,24 +424,6 @@ Privacy and Security -&amp;gt; Security -&amp;gt; Use Secure DNS
       <guid>/linux/vnc/</guid>
       <description>服务端安装 # ubuntu sudo apt-get install x11vnc x11vnc -storepasswd x11vnc -auth guess -once -loop -noxdamage -repeat -rfbauth ~/.vnc/passwd -rfbport 5900 -shared x11vnc -forever https://www.realvnc.com/en/connect/download/viewer/ # arch yay -S x11vnc net-tools update -&amp;gt; /etc/gdm/custom.conf: WaylandEnable=false x11vnc -wait 50 -noxdamage -passwd PASSWORD -display :0 -forever -o /var/log/x11vnc.log -bg 客户端 https://www.realvnc.com/
 # 错误 # display_server_not_supported # /etc/gdm3/custom.conf [daemon] # Enabling automatic login AutomaticLoginEnable=true AutomaticLogin=$USERNAME sudo systemctl restart gdm.service </description>
-    </item>
-    
-    <item>
-      <title>书签管理器 shiori</title>
-      <link>/docker/shiori/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docker/shiori/</guid>
-      <description># 原链接 https://github.com/go-shiori/shiori/ # loginuser: shiori # passwd: gopher version: &amp;#34;2.1&amp;#34; services: shiori: image: nicholaswilde/shiori:latest container_name: shiori-default environment: TZ: Asia/Shanghai PUID: 1000 PGID: 1000 SHIORI_PG_HOST: db SHIORI_PG_PORT: 5432 SHIORI_PG_USER: user SHIORI_PG_PASS: password SHIORI_PG_NAME: &amp;#34;&amp;#34; ports: - 8080:8080 restart: unless-stopped volumes: - ./data/shiori:/data depends_on: - db db: image: postgres restart: always environment: POSTGRES_USER: user POSTGRES_PASSWORD: password volumes: - ./data/shiori_postgres:/var/lib/postgresql/data </description>
-    </item>
-    
-    <item>
-      <title>网盘 cloudreve</title>
-      <link>/docker/cloudreve/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docker/cloudreve/</guid>
-      <description># mkdir -vp cloudreve/{uploads,avatar} \ &amp;amp;&amp;amp; touch cloudreve/conf.ini \ &amp;amp;&amp;amp; touch cloudreve/cloudreve.db \ &amp;amp;&amp;amp; mkdir -p aria2/config \ &amp;amp;&amp;amp; mkdir -p data/aria2 \ &amp;amp;&amp;amp; chmod -R 777 data/aria2 version: &amp;#34;3.8&amp;#34; services: cloudreve: container_name: cloudreve image: cloudreve/cloudreve:latest restart: unless-stopped ports: - &amp;#34;5212:5212&amp;#34; volumes: - ./data/aria2/downloads:/downloads - ./data/cloudreve/uploads:/cloudreve/uploads - ./data/cloudreve/conf.ini:/cloudreve/conf.ini - ./data/cloudreve/cloudreve.db:/cloudreve/cloudreve.db - ./data/cloudreve/avatar:/cloudreve/avatar depends_on: - Aria2-Pro Aria2-Pro: container_name: aria2-pro image: p3terx/aria2-pro environment: - PUID=65534 - PGID=65534 - UMASK_SET=022 - RPC_SECRET=0b5c74bcc83fc89f29b6f9f4e8a812ef87f69258 - RPC_PORT=6800 - LISTEN_PORT=6888 - DISK_CACHE=64M - IPV6_MODE=true - UPDATE_TRACKERS=true # - CUSTOM_TRACKER_URL= - TZ=Asia/Shanghai volumes: - .</description>
     </item>
     
   </channel>
