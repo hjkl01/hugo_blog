@@ -1,5 +1,5 @@
 ---
-title: "书签管理器 shiori"
+title: "shiori 书签管理器"
 draft: true
 ---
 
